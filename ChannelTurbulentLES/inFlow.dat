@@ -50,14 +50,14 @@ SolidBody
  0.000D+0   0.000D+0   0.000D+0               read(buffer,*) XYZAmpl(1:3,iFish)
  0.000D+0   0.000D+0   0.000D+0               read(buffer,*) XYZPhi(1:3,iFish)
  # angle in degree
- 0.000D+0   0.000D+0   -15.d0               read(buffer,*) AoAo(1:3,iFish)
+ 0.000D+0   0.000D+0   -15.d0                 read(buffer,*) AoAo(1:3,iFish)
  0.000D+0   0.000D+0   0.000D+0               read(buffer,*) AoAAmpl(1:3,iFish)
  0.000D+0   0.000D+0   0.000D+0               read(buffer,*) AoAPhi(1:3,iFish)
- ===
+=====================
 ENDSolidBody
 ProbingFluid
  1          1                                 read(buffer,*) fluidProbingNum (0: no output)
-100.000D+0   -5.000D+0   0.000D+0               read(buffer,*) fluidProbingCoords(1,1:3)
+100.000D+0   -5.000D+0   0.000D+0             read(buffer,*) fluidProbingCoords(1,1:3)
 ProbingSolid
  1                                            read(buffer,*) solidProbingNum (0: no output)
  100                                          read(buffer,*) solidProbingNode(1)

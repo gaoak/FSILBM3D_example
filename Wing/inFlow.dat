@@ -1,3 +1,4 @@
+# 2025.03.05
 Parallel
 # parameter for mpi
  64                                           read(buffer,*) npsize
@@ -12,7 +13,8 @@ FlowCondition
  0.000D+0   0.000D+0   0.000D+0   0           read(buffer,*) shearRateIn(1:3),flow%velocityKind
  0.000D+0   0.000D+0   0.000D+0               read(buffer,*) volumeForceIn(1:3)
  0.000D+0   0.000D+0   0.000D+0               read(buffer,*) volumeForceAmp,volumeForceFreq,volumeForcePhi
- 0         1000.0D+0                          read(buffer,*) TrefType,Tref
+ 0          1.000D+0                          read(buffer,*) LrefType,Lref
+ 0          1000.0D+0                         read(buffer,*) TrefType,Tref
  0          0.010D+0                          read(buffer,*) UrefType,Uref
  10         0.010D+0                          read(buffer,*) ntolLBM,dtolLBM
  1                                            read(buffer,*) interpolateScheme
@@ -21,8 +23,8 @@ FluidBlocks
  2                                            read(buffer,*) nblock (should be npairs + 1)
  1          14         0          1           read(buffer,*) ID,iCollideModel,offsetOutput,isoutput
  501        201        401                    read(buffer,*) xDim,yDim,zDim
- 0.050D+0 -5.000D+0  -5.000D+0  0.000D+0       read(buffer,*) dh,xmin,ymin,zmin
- 101   103   103  103   302   103            read(buffer,*) boundaryConditions(1:6) (xmin,xmax,ymin,ymax,zmin,zmax)
+ 0.050D+0 -5.000D+0  -5.000D+0  0.000D+0      read(buffer,*) dh,xmin,ymin,zmin
+ 101   103   103  103   302   103             read(buffer,*) boundaryConditions(1:6) (xmin,xmax,ymin,ymax,zmin,zmax)
  0.25   0   0   0   0   0   0   0   0   0     read(buffer,*) params(1:10)
 =====================
  2          14         0          1           read(buffer,*) ID,iCollideModel,offsetOutput,isoutput
@@ -50,13 +52,14 @@ SolidBody
  0.010D+0   0.000D+0                          read(buffer,*) freq(iFish),St(iFish)
  0.000D+0   0.025D+0   0.000D+0               read(buffer,*) firstXYZ(1:3)
  0.000D+0   0.000D+0   0.000D+0               read(buffer,*) deltaXYZ(1:3)
+ 0.000D+0   0.000D+0   0.000D+0               read(buffer,*) initXYZVel(1:3,iFish)
  0.000D+0   0.000D+0   0.000D+0               read(buffer,*) XYZAmpl(1:3,iFish)
  0.000D+0   0.000D+0   0.000D+0               read(buffer,*) XYZPhi(1:3,iFish)
  # angle in degree
  0.000D+0   0.000D+0   75.00D+0               read(buffer,*) AoAo(1:3,iFish)
  0.000D+0   0.000D+0   0.000D+0               read(buffer,*) AoAAmpl(1:3,iFish)
  0.000D+0   0.000D+0   0.000D+0               read(buffer,*) AoAPhi(1:3,iFish)
- ===
+=====================
 ENDSolidBody
 ProbingFluid
  1          1                                 read(buffer,*) fluidProbingNum (0: no output)
