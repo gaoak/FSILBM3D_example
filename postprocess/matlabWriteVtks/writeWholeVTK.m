@@ -1,4 +1,4 @@
-function [] = writeWholeVTK(mesh,inflowVelocity,time,Lref,Tref,writePath)
+function [] = writeWholeVTK(mesh,time,inflowVelocity,Lref,Tref,writePath)
 if norm(inflowVelocity) ~= 0
     % Update whole block parameters
     exMesh = mesh;
