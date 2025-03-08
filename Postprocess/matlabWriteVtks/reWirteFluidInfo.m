@@ -62,6 +62,6 @@ fileID = fopen([casePath '\DatInfo\turbulent.plt'], 'w');
 fprintf(fileID, 'variables= "y_plus" "u_plus" "v_plus" "w_plus" "uu_plus" "vv_plus" "ww_plus" "uv_plus"\n');
 for j = 1:length(meanData.y_plus)
     fprintf(fileID, [repmat('%.8g ', 1, 8), '\n'], meanData.y_plus(j), meanData.u_plus(j), meanData.v_plus(j), meanData.w_plus(j)...
-                  , meanData.uu_plus(j), meanData.vv_plus(j), meanData.ww_plus(j), meanData.uv_plus(j));
+                  ,  meanData.uu_plus(j), meanData.vv_plus(j), meanData.ww_plus(j), meanData.uv_plus(j));
 end
 fclose(fileID);
