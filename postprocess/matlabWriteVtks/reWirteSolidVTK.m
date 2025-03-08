@@ -3,13 +3,14 @@ run getParameters.m
 readPath  = [casePath '\DatBodySpan\'];
 writePath = [casePath '\DatBodySpan\'];
 for n = 1:nfile
-    time = sTime + (n - 1) * dTime;
-    for i = 1:nSolid
+    time = LBM.sTime + (n - 1) * LBM.dTime;
+    for i = 1:LBM.nSolid
         % Generate reading and writing file paths
         [readName, writeName] = generateSolidPath(readPath,writePath,time,i);
         % Read mesh data
-        solid = readAscallSolid(readName,time,UVW,Lref,Tref);
+        solid = readAscallSolid(readName,time,LBM.UVW,LBM.Lref,LBM.Tref);
         % Write mesh data in vtks
         writeSolidVTK(solid,writeName)
     end
 end
+fclose all;
