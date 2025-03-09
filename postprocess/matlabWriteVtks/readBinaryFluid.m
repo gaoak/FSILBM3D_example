@@ -9,10 +9,10 @@ mesh.nx   = fread(fileID, 1, 'int32' );
 mesh.ny   = fread(fileID, 1, 'int32' );
 mesh.nz   = fread(fileID, 1, 'int32' );
 mesh.id   = fread(fileID, 1, 'int32' );
-mesh.xmin = fread(fileID, 1, 'double') - inflowVelocity(1) / Lref * time * Tref;  % dimensionless
-mesh.ymin = fread(fileID, 1, 'double') - inflowVelocity(2) / Lref * time * Tref;
-mesh.zmin = fread(fileID, 1, 'double') - inflowVelocity(3) / Lref * time * Tref;
-mesh.dh   = fread(fileID, 1, 'double');
+mesh.xmin = fread(fileID, 1, 'double') / Lref  - inflowVelocity(1) / Lref * time * Tref;  % dimensionless
+mesh.ymin = fread(fileID, 1, 'double') / Lref  - inflowVelocity(2) / Lref * time * Tref;
+mesh.zmin = fread(fileID, 1, 'double') / Lref  - inflowVelocity(3) / Lref * time * Tref;
+mesh.dh   = fread(fileID, 1, 'double') / Lref ;
 % Calculate max coordinates
 mesh.xmax = mesh.xmin + (mesh.nx - 1) * mesh.dh;
 mesh.ymax = mesh.ymin + (mesh.ny - 1) * mesh.dh;
