@@ -1,7 +1,9 @@
 clear;clc;close all;format long
 %% Case path
 isOnlyWriteRootBlock = true;
-casePath  = 'G:\TandemPlates\Validation\Comparison\Case3DTurbulent2';
+isUseMovingGridPost  = false;
+isGiveCalculateTime  = [];
+casePath  = 'G:\TandemPlates\Examples\TurbulentFlaps-2';
 %% Read key lines
 readLine.ViscLine  = readKeyLines([casePath '\check.dat' ],'Nu'            ,1);
 readLine.UrefLine  = readKeyLines([casePath '\check.dat' ],'Uref'          ,1);
@@ -30,10 +32,15 @@ LBM.dTime  = str2double(readLine.deltaLine{1}); % writing intervl
 LBM.nBlock = floor(str2double(readLine.fluidLine{1})); % the number of fluid blocks
 LBM.nSolid = floor(str2double(readLine.solidLine{1})); % the number of solids
 LBM.meshContain = cell(LBM.nBlock); % the contian relationship of the fluid blocks, the space means no son block
-if LBM.nSolid == 0
-    LBM.UVW    = [0 0 0]; % mesh moving velocity
-else
+if isUseMovingGridPost
     LBM.UVW    = [str2double(readLine.UVWlLine{1}) str2double(readLine.UVWlLine{2}) str2double(readLine.UVWlLine{3})]; % mehs moving velocity
+else
+    LBM.UVW    = [0 0 0];
+end
+if norm(isGiveCalculateTime) > 0
+    LBM.sTime = isGiveCalculateTime(1);
+    LBM.dTime = isGiveCalculateTime(2);
+    LBM.eTime = isGiveCalculateTime(3);
 end
 for n = 1:LBM.nBlock
     blockLine = readKeyLines([casePath '\check.dat'],'sonBlocks',n);

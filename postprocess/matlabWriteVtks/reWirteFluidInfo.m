@@ -58,10 +58,13 @@ meanData.vv_plus = (meanData.vv / meanData.u_tau / meanData.u_tau - meanData.v_p
 meanData.ww_plus = (meanData.ww / meanData.u_tau / meanData.u_tau - meanData.w_plus .* meanData.w_plus);
 meanData.uv_plus = (meanData.uv / meanData.u_tau / meanData.u_tau - meanData.u_plus .* meanData.v_plus);
 %% Write files
+% log law
+linear_law = meanData.y_plus;
+log_law    = log(meanData.y_plus) / 0.40 + 5.6;
 fileID = fopen([casePath '\DatInfo\turbulent.plt'], 'w');
-fprintf(fileID, 'variables= "y_plus" "u_plus" "v_plus" "w_plus" "uu_plus" "vv_plus" "ww_plus" "uv_plus"\n');
+fprintf(fileID, 'variables= "y_plus" "u_plus" "v_plus" "w_plus" "uu_plus" "vv_plus" "ww_plus" "uv_plus" "linear_law" "log_law"\n');
 for j = 1:length(meanData.y_plus)
-    fprintf(fileID, [repmat('%.8g ', 1, 8), '\n'], meanData.y_plus(j), meanData.u_plus(j), meanData.v_plus(j), meanData.w_plus(j)...
-                  ,  meanData.uu_plus(j), meanData.vv_plus(j), meanData.ww_plus(j), meanData.uv_plus(j));
+    fprintf(fileID, [repmat('%.8g ', 1, 10), '\n'], meanData.y_plus(j), meanData.u_plus(j), meanData.v_plus(j),...
+                     meanData.w_plus(j), meanData.uu_plus(j), meanData.vv_plus(j), meanData.ww_plus(j), meanData.uv_plus(j),linear_law(j),log_law(j));
 end
 fclose(fileID);

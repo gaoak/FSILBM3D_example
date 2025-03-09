@@ -15,10 +15,10 @@ fprintf(fileID, 'POINTS %d float\n', solid.nx * solid.ny * solid.nz);
 
 % Write coordinates 
 for i = 1:solid.nx
-    fprintf(fileID, '%f %f %f\n', solid.x(i), solid.yl(i), solid.zl(i));
+    fprintf(fileID, '%f %f %f\n', solid.xl(i), solid.yl(i), solid.zl(i));
 end
 for k = 1:solid.nx
-    fprintf(fileID, '%f %f %f\n', solid.x(k), solid.yr(k), solid.zr(k));
+    fprintf(fileID, '%f %f %f\n', solid.xr(k), solid.yr(k), solid.zr(k));
 end
 % Write point data
 fprintf(fileID, 'POINT_DATA %d\n', solid.nx * solid.ny * solid.nz);

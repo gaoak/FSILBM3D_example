@@ -22,6 +22,7 @@ if ~found
 end
 % Replace D with E
 keyLine = strrep(keyLine, 'D', 'E');
+keyLine = strrep(keyLine, 'd', 'E');
 % Remove whitespace characters at the beginning and end
 keyLine = strtrim(keyLine);
 % Split strings by spaces
