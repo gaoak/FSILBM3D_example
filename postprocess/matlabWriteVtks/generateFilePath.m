@@ -1,4 +1,4 @@
-function [readName,writeName] = generateFluidPath(readPath,writePath,nTime,id)
+function [readName,writeName] = generateFilePath(readPath,writePath,nTime,id,type)
 % Convert input numbers to strings
 numStr1 = num2str(nTime * 1e5);
 numStr2 = num2str(id);
@@ -20,6 +20,14 @@ else
     % If the length is sufficient, return directly
     newStr2 = numStr2;
 end
-readName  = [readPath 'Flow' newStr1 '_b' newStr2];
-writeName = [writePath 'b' newStr2 'Flow' newStr1 '.vtk' ];
+if type == 0       % fluid name
+    readName  = [readPath 'Flow' newStr1 '_b' newStr2];
+    writeName = [writePath 'b' newStr2 'Flow' newStr1 '.vtk' ];
+elseif(type == 1)  % averaging fluid name
+    readName  = [readPath  'MeanFlow_b' newStr2];
+    writeName = [writePath 'MeanFlow_b' newStr2 '.vtk'];
+else               % solid name
+    readName  = [readPath  'BodyFake' newStr2 '_' newStr1 '.dat'];
+    writeName = [writePath 'BodyFake' newStr2 '_' newStr1 '.vtk'];
+end
 end
