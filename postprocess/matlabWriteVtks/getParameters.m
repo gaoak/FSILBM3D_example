@@ -2,10 +2,10 @@ clear;clc;close all;format long
 %% Case path
 isOnlyWriteRootBlock = true;
 isUseMovingGridPost  = false;
-isGiveCalculateTime  = [];
-casePath  = 'G:\TandemPlates\Examples\TurbulentFlaps-2';
+isGiveCalculateTime  = [3600 10 3640];  % empty means use the parameters in inflow.dat
+casePath  = 'G:\TandemPlates\Validation\Comparison\Case3DTurbulentWALE';
 %% Read key lines
-readLine.ViscLine  = readKeyLines([casePath '\check.dat' ],'Nu'            ,1);
+readLine.ViscLine  = readKeyLines([casePath '\check.dat' ],'Mu'            ,1);
 readLine.UrefLine  = readKeyLines([casePath '\check.dat' ],'Uref'          ,1);
 readLine.TrefLine  = readKeyLines([casePath '\check.dat' ],'Tref'          ,1);
 readLine.LrefLine  = readKeyLines([casePath '\check.dat' ],'Lref'          ,1);
@@ -21,14 +21,11 @@ if str2double(readLine.deltaLine{1}) ~= str2double(readLine.deltaLine{2})
     warning('solid writing interval %f does not equal fluid writing interval %f!',str2double(deltaLine{1}),str2double(deltaLine{2}))
 end
 %% Read key parameters
-LBM.Nu     = str2double(readLine.ViscLine{3}); % viscosity
+LBM.Mu     = str2double(readLine.ViscLine{3}); % viscosity
 LBM.denIn  = str2double(readLine.densLine{2}); % fluid density
 LBM.Uref   = str2double(readLine.UrefLine{3}); % reference velocity
 LBM.Tref   = str2double(readLine.TrefLine{3}); % reference time
 LBM.Lref   = str2double(readLine.LrefLine{3}); % reference length
-LBM.sTime  = str2double(readLine.TimeLine{1}); % begine time for writing 
-LBM.eTime  = min(str2double(readLine.TotalLine{1}),str2double(readLine.TimeLine{2})); % ending time for writing 
-LBM.dTime  = str2double(readLine.deltaLine{1}); % writing intervl
 LBM.nBlock = floor(str2double(readLine.fluidLine{1})); % the number of fluid blocks
 LBM.nSolid = floor(str2double(readLine.solidLine{1})); % the number of solids
 LBM.meshContain = cell(LBM.nBlock); % the contian relationship of the fluid blocks, the space means no son block
@@ -37,10 +34,14 @@ if isUseMovingGridPost
 else
     LBM.UVW    = [0 0 0];
 end
-if norm(isGiveCalculateTime) > 0
+if ~isempty(isGiveCalculateTime)
     LBM.sTime = isGiveCalculateTime(1);
     LBM.dTime = isGiveCalculateTime(2);
     LBM.eTime = isGiveCalculateTime(3);
+else
+    LBM.sTime  = str2double(readLine.TimeLine{1}); % begine time for writing 
+    LBM.eTime  = min(str2double(readLine.TotalLine{1}),str2double(readLine.TimeLine{2})); % ending time for writing 
+    LBM.dTime  = str2double(readLine.deltaLine{1}); % writing intervl
 end
 for n = 1:LBM.nBlock
     blockLine = readKeyLines([casePath '\check.dat'],'sonBlocks',n);
