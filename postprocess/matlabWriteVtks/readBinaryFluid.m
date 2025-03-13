@@ -13,17 +13,32 @@ mesh.xmin = fread(fileID, 1, 'double') / Lref  - inflowVelocity(1) / Lref * time
 mesh.ymin = fread(fileID, 1, 'double') / Lref  - inflowVelocity(2) / Lref * time * Tref;
 mesh.zmin = fread(fileID, 1, 'double') / Lref  - inflowVelocity(3) / Lref * time * Tref;
 mesh.dh   = fread(fileID, 1, 'double') / Lref ;
+% Read velocities
+u  = fread(fileID, mesh.nz * mesh.ny * mesh.nx, 'float32') - inflowVelocity(1) / Uref; % k,j,i
+v  = fread(fileID, mesh.nz * mesh.ny * mesh.nx, 'float32') - inflowVelocity(2) / Uref; % dimensionless
+w  = fread(fileID, mesh.nz * mesh.ny * mesh.nx, 'float32') - inflowVelocity(3) / Uref;
+mesh.u  = permute(reshape(u,  [mesh.nz mesh.ny mesh.nx]),[3 2 1]); % i,j,k
+mesh.v  = permute(reshape(v,  [mesh.nz mesh.ny mesh.nx]),[3 2 1]);
+mesh.w  = permute(reshape(w,  [mesh.nz mesh.ny mesh.nx]),[3 2 1]);
+% Read turbulent statistics
+uu = fread(fileID, mesh.nz * mesh.ny * mesh.nx, 'float32'); 
+if ~isempty(uu)
+    vv = fread(fileID, mesh.nz * mesh.ny * mesh.nx, 'float32'); 
+    ww = fread(fileID, mesh.nz * mesh.ny * mesh.nx, 'float32');
+    uv = fread(fileID, mesh.nz * mesh.ny * mesh.nx, 'float32'); 
+    uw = fread(fileID, mesh.nz * mesh.ny * mesh.nx, 'float32'); 
+    vw = fread(fileID, mesh.nz * mesh.ny * mesh.nx, 'float32');
+    mesh.uu = permute(reshape(uu, [mesh.nz mesh.ny mesh.nx]),[3 2 1]);
+    mesh.vv = permute(reshape(vv, [mesh.nz mesh.ny mesh.nx]),[3 2 1]);
+    mesh.ww = permute(reshape(ww, [mesh.nz mesh.ny mesh.nx]),[3 2 1]);
+    mesh.uv = permute(reshape(uv, [mesh.nz mesh.ny mesh.nx]),[3 2 1]);
+    mesh.uw = permute(reshape(uw, [mesh.nz mesh.ny mesh.nx]),[3 2 1]);
+    mesh.vw = permute(reshape(vw, [mesh.nz mesh.ny mesh.nx]),[3 2 1]);
+end
 % Calculate max coordinates
 mesh.xmax = mesh.xmin + (mesh.nx - 1) * mesh.dh;
 mesh.ymax = mesh.ymin + (mesh.ny - 1) * mesh.dh;
 mesh.zmax = mesh.zmin + (mesh.nz - 1) * mesh.dh;
-% Read velocities
-u = fread(fileID, mesh.nz * mesh.ny * mesh.nx, 'float32') - inflowVelocity(1) / Uref; % k,j,i
-v = fread(fileID, mesh.nz * mesh.ny * mesh.nx, 'float32') - inflowVelocity(2) / Uref; % dimensionless
-w = fread(fileID, mesh.nz * mesh.ny * mesh.nx, 'float32') - inflowVelocity(3) / Uref;
-mesh.u = permute(reshape(u, [mesh.nz mesh.ny mesh.nx]),[3 2 1]); % i,j,k
-mesh.v = permute(reshape(v, [mesh.nz mesh.ny mesh.nx]),[3 2 1]);
-mesh.w = permute(reshape(w, [mesh.nz mesh.ny mesh.nx]),[3 2 1]);
 % Calculate coordinates
 array.x = mesh.xmin : mesh.dh : mesh.xmax;
 array.y = mesh.ymin : mesh.dh : mesh.ymax;
