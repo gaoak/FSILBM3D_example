@@ -10,4 +10,12 @@ nx2 = nx1 + (meshson.nx - 1)/2;
 meshFather.u(nx1:nx2,ny1:ny2,nz1:nz2) = meshson.u(1:2:meshson.nx,1:2:meshson.ny,1:2:meshson.nz);
 meshFather.v(nx1:nx2,ny1:ny2,nz1:nz2) = meshson.v(1:2:meshson.nx,1:2:meshson.ny,1:2:meshson.nz);
 meshFather.w(nx1:nx2,ny1:ny2,nz1:nz2) = meshson.w(1:2:meshson.nx,1:2:meshson.ny,1:2:meshson.nz);
+if ~isempty(meshFather.uu)
+    meshFather.uu(nx1:nx2,ny1:ny2,nz1:nz2) = meshson.uu(1:2:meshson.nx,1:2:meshson.ny,1:2:meshson.nz);
+    meshFather.vv(nx1:nx2,ny1:ny2,nz1:nz2) = meshson.vv(1:2:meshson.nx,1:2:meshson.ny,1:2:meshson.nz);
+    meshFather.ww(nx1:nx2,ny1:ny2,nz1:nz2) = meshson.ww(1:2:meshson.nx,1:2:meshson.ny,1:2:meshson.nz);
+    meshFather.uv(nx1:nx2,ny1:ny2,nz1:nz2) = meshson.uv(1:2:meshson.nx,1:2:meshson.ny,1:2:meshson.nz);
+    meshFather.uw(nx1:nx2,ny1:ny2,nz1:nz2) = meshson.uw(1:2:meshson.nx,1:2:meshson.ny,1:2:meshson.nz);
+    meshFather.vw(nx1:nx2,ny1:ny2,nz1:nz2) = meshson.vw(1:2:meshson.nx,1:2:meshson.ny,1:2:meshson.nz);
+end
 end

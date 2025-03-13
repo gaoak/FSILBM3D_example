@@ -2,8 +2,8 @@ clear;clc;close all;format long
 %% Case path
 isOnlyWriteRootBlock = true;
 isUseMovingGridPost  = false;
-isGiveCalculateTime  = [3600 10 3640];  % empty means use the parameters in inflow.dat
-casePath  = 'G:\TandemPlates\Validation\Comparison\Case3DTurbulentWALE';
+isGiveCalculateTime  = [3600 10 3600];  % empty means use the parameters in inflow.dat
+casePath  = 'G:\TandemPlates\Validation\Comparison\Case3DTurbulentReTau180';
 %% Read key lines
 readLine.ViscLine  = readKeyLines([casePath '\check.dat' ],'Mu'            ,1);
 readLine.UrefLine  = readKeyLines([casePath '\check.dat' ],'Uref'          ,1);
