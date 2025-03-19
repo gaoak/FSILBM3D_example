@@ -17,34 +17,38 @@ for i = LBM.nBlock:-1:1
     end
 end
 % Write mesh data in vtks
-writeFluidVTK(meshFather,writeNameFather)
+% writeFluidVTK(meshFather,writeNameFather)
 % Calculate space averaging data
 meanData.u  = mean(mean(meshFather.u, 1),3) * LBM.Uref;
 meanData.v  = mean(mean(meshFather.v, 1),3) * LBM.Uref;
 meanData.w  = mean(mean(meshFather.w, 1),3) * LBM.Uref;
-meanData.uu = mean(mean((meshFather.uu - meshFather.u.*meshFather.u),1),3) * LBM.Uref * LBM.Uref;
-meanData.vv = mean(mean((meshFather.vv - meshFather.v.*meshFather.v),1),3) * LBM.Uref * LBM.Uref;
-meanData.ww = mean(mean((meshFather.ww - meshFather.w.*meshFather.w),1),3) * LBM.Uref * LBM.Uref;
-meanData.uv = mean(mean((meshFather.uv - meshFather.u.*meshFather.v),1),3) * LBM.Uref * LBM.Uref;
-meanData.uw = mean(mean((meshFather.uw - meshFather.u.*meshFather.w),1),3) * LBM.Uref * LBM.Uref;
-meanData.vw = mean(mean((meshFather.vw - meshFather.v.*meshFather.w),1),3) * LBM.Uref * LBM.Uref;
+meanData.uu = mean(mean(meshFather.uu,1),3) * LBM.Uref * LBM.Uref;
+meanData.vv = mean(mean(meshFather.vv,1),3) * LBM.Uref * LBM.Uref;
+meanData.ww = mean(mean(meshFather.ww,1),3) * LBM.Uref * LBM.Uref;
+meanData.uv = mean(mean(meshFather.uv,1),3) * LBM.Uref * LBM.Uref;
+meanData.uw = mean(mean(meshFather.uw,1),3) * LBM.Uref * LBM.Uref;
+meanData.vw = mean(mean(meshFather.vw,1),3) * LBM.Uref * LBM.Uref;
 % Judge the first grid height
-if (mod(meshFather.ny,2)==0)
+y_coor  = zeros(1,meshFather.ny);
+if isHalfWayBounceBack
     h0 = 0.5 * meshFather.dh * LBM.Lref;
     firstGrid = 1;
+    for i = 1:meshFather.ny
+        y_coor(i)  = meshFather.dh * LBM.Lref * (i - 1) + h0;
+    end
 else
     h0 = 1.0 * meshFather.dh * LBM.Lref;
     firstGrid = 2;
-end
-% Calculate y coordinates
-y_coor  = zeros(1,meshFather.ny);
-for i = 1:meshFather.ny
-    y_coor(i)  = meshFather.dh * LBM.Lref * (i - 1) + h0;
+    for i = 1:meshFather.ny
+        y_coor(i)  = meshFather.dh * LBM.Lref * (i - 1);
+    end
 end
 % Calculate averaging turbulent parameters
 turbulent.tau_w   = LBM.Mu * meanData.u(firstGrid) / h0;                 % μ*u_0/y_0
 turbulent.u_tau   = sqrt(turbulent.tau_w / LBM.denIn);                   % sqrt(τ_w/ρ)
 turbulent.Re_tau  = turbulent.u_tau * LBM.Lref * LBM.denIn / LBM.Mu;
+fprintf('Calculate Re_tau: %s\n',turbulent.Re_tau)
+turbulent.u_tau   = 180 * LBM.Mu / LBM.Lref /LBM.denIn;
 turbulent.y_plus  = turbulent.u_tau * y_coor(1,:) * LBM.denIn / LBM.Mu;  % y*u_τ/ν
 % Calculate first order statistic
 turbulent.u_plus  = meanData.u / turbulent.u_tau;
@@ -67,5 +71,4 @@ for j = 1:length(turbulent.y_plus)
                                                     turbulent.uu_plus(j), turbulent.vv_plus(j), turbulent.ww_plus(j), turbulent.uv_plus(j), ...
                                                     turbulent.uw_plus(j), turbulent.vw_plus(j), linear_law(j), log_law(j));
 end
-fclose(fileID);
-disp(turbulent.Re_tau)
+fclose all;
