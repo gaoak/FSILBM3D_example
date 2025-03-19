@@ -22,9 +22,10 @@ for n = 1:nfile
             writeFluidVTK(meshFather,writeNameFather)
         end
     end
-    if isOnlyWriteRootBlock 
+    if isOnlyWriteRootBlock
         writeFluidVTK(meshFather,writeNameFather)
     end
 end
 % write whole block contains the calculation domain at all times
 writeWholeVTK(meshFather,time,LBM.UVW,LBM.Lref,LBM.Tref,writePath)
+fclose all;

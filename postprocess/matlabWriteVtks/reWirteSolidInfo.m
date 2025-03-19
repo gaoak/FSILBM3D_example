@@ -79,3 +79,4 @@ for i = 1:LBM.nSolid
     end
     fprintf('Writing file read : %s\n', [casePath '\DatInfo\FishNodeMean_00' num2str(i) '_n.plt'])
 end
+fclose all;
