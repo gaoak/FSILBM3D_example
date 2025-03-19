@@ -15,7 +15,7 @@ fprintf(fid, 'DIMENSIONS %d %d %d\n', mesh.nx, mesh.ny, mesh.nz);
 fprintf(fid, 'POINTS %d float\n', mesh.nx * mesh.ny * mesh.nz);
 
 % Write coordinates in binary format
-fwrite(fid, [mesh.x(:), mesh.y(:), mesh.z(:)]', 'float', 'ieee-be'); % i,j,k
+fwrite(fid, [mesh.x(:), mesh.y(:), mesh.z(:)]', 'float32', 'ieee-be'); % i,j,k
 
 % Write point data
 fprintf(fid, 'POINT_DATA %d\n', mesh.nx * mesh.ny * mesh.nz);
