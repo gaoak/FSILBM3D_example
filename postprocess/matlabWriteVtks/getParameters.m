@@ -2,7 +2,8 @@ clear;clc;close all;format long
 %% Case path
 isOnlyWriteRootBlock = true;
 isUseMovingGridPost  = false;
-isGiveCalculateTime  = [3600 10 3600];  % empty means use the parameters in inflow.dat
+isHalfWayBounceBack  = true;
+isGiveCalculateTime  = [0 10 0];  % empty means use the parameters in inflow.dat
 casePath  = 'G:\TandemPlates\Validation\Comparison\Case3DTurbulentReTau180';
 %% Read key lines
 readLine.ViscLine  = readKeyLines([casePath '\check.dat' ],'Mu'            ,1);
@@ -12,11 +13,11 @@ readLine.LrefLine  = readKeyLines([casePath '\check.dat' ],'Lref'          ,1);
 readLine.blockLine = readKeyLines([casePath '\check.dat' ],'sonBlocks'     ,1);
 readLine.densLine  = readKeyLines([casePath '\inFlow.dat'],'denIn'         ,1);
 readLine.UVWlLine  = readKeyLines([casePath '\inFlow.dat'],'uvwIn'         ,1);
+readLine.solidLine = readKeyLines([casePath '\inFlow.dat'],'nFish'         ,1);
+readLine.fluidLine = readKeyLines([casePath '\inFlow.dat'],'nblock'        ,1);
 readLine.TimeLine  = readKeyLines([casePath '\inFlow.dat'],'timeWriteBegin',1);
 readLine.TotalLine = readKeyLines([casePath '\inFlow.dat'],'timeSimTotal'  ,1);
 readLine.deltaLine = readKeyLines([casePath '\inFlow.dat'],'timeWriteFlow' ,1); 
-readLine.fluidLine = readKeyLines([casePath '\inFlow.dat'],'nblock'        ,1);
-readLine.solidLine = readKeyLines([casePath '\inFlow.dat'],'nFish'         ,1);
 if str2double(readLine.deltaLine{1}) ~= str2double(readLine.deltaLine{2})
     warning('solid writing interval %f does not equal fluid writing interval %f!',str2double(deltaLine{1}),str2double(deltaLine{2}))
 end
