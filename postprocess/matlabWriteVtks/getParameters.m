@@ -3,8 +3,8 @@ clear;clc;close all;format long
 isOnlyWriteRootBlock = true;
 isUseMovingGridPost  = false;
 isHalfWayBounceBack  = true;
-isGiveCalculateTime  = [0 10 0];  % empty means use the parameters in inflow.dat
-casePath  = 'G:\TandemPlates\Validation\Comparison\Case3DTurbulentReTau180';
+isGiveCalculateTime  = [300.1 0.1 305];  % empty means use the parameters in inflow.dat
+casePath  = 'G:\TandemPlates\Validation\Comparison\Case3DTurbulentDNSFiner';
 %% Read key lines
 readLine.ViscLine  = readKeyLines([casePath '\check.dat' ],'Mu'            ,1);
 readLine.UrefLine  = readKeyLines([casePath '\check.dat' ],'Uref'          ,1);
@@ -55,4 +55,4 @@ for n = 1:LBM.nBlock
     end
 end
 %% Calculate key parameters
-nfile  = (LBM.eTime - LBM.sTime) / LBM.dTime + 1;
+nfile = round((LBM.eTime - LBM.sTime) / LBM.dTime) + 1;

@@ -48,7 +48,6 @@ turbulent.tau_w   = LBM.Mu * meanData.u(firstGrid) / h0;                 % μ*u_
 turbulent.u_tau   = sqrt(turbulent.tau_w / LBM.denIn);                   % sqrt(τ_w/ρ)
 turbulent.Re_tau  = turbulent.u_tau * LBM.Lref * LBM.denIn / LBM.Mu;
 fprintf('Calculate Re_tau: %s\n',turbulent.Re_tau)
-turbulent.u_tau   = 180 * LBM.Mu / LBM.Lref /LBM.denIn;
 turbulent.y_plus  = turbulent.u_tau * y_coor(1,:) * LBM.denIn / LBM.Mu;  % y*u_τ/ν
 % Calculate first order statistic
 turbulent.u_plus  = meanData.u / turbulent.u_tau;
