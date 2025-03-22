@@ -26,9 +26,25 @@ vector<double> VerticalLine(double t, double r) {
     return res;
 }
 
+vector<double> InvertVerticalLine(double t, double r, vector<double> &param) {
+    vector<double> res(3);
+    res[0] = 0.;
+    res[1] = param[0] - r*t;
+    res[2] = 0.;
+    return res;
+}
+
 vector<double> HorizontalLine(double t, double r) {
     vector<double> res(3);
     res[0] = r*t;
+    res[1] = 0.;
+    res[2] = 0.;
+    return res;
+}
+
+vector<double> InvertHorizontalLine(double t, double r, vector<double> &param) {
+    vector<double> res(3);
+    res[0] = param[0] - r*t;
     res[1] = 0.;
     res[2] = 0.;
     return res;
@@ -50,7 +66,7 @@ vector<double> HorizontalSquare(double t, const std::vector<double> &r) {
     return res;
 }
 
-vector<double> GeometryShape(double t, const std::vector<double> &r, vector<double> &normal) {
+vector<double> GeometryShape(double t, const std::vector<double> &r, vector<double> &normal, vector<double> &param) {
     std::vector<double> p;
     if (GEOMTYPE == 0) {
         p = Cylinder(t, r[0]);
@@ -59,12 +75,18 @@ vector<double> GeometryShape(double t, const std::vector<double> &r, vector<doub
         p = VerticalLine(t, r[0]);
     }
     else if (GEOMTYPE == 2) {
-        p = HorizontalLine(t, r[0]);
+        p = InvertVerticalLine(t, r[0], param);
     }
     else if (GEOMTYPE == 3) {
-        p = HorizontalCos(t, r);
+        p = HorizontalLine(t, r[0]);
     }
     else if (GEOMTYPE == 4) {
+        p = InvertHorizontalLine(t, r[0], param);
+    }
+    else if (GEOMTYPE == 5) {
+        p = HorizontalCos(t, r);
+    }
+    else if (GEOMTYPE == 6) {
         p = HorizontalSquare(t, r);
     }
     else {
@@ -76,7 +98,7 @@ vector<double> GeometryShape(double t, const std::vector<double> &r, vector<doub
     return p;
 }
 
-void GeneratePoints(int N, const std::vector<double> &r, vector<vector<double> > &points, vector<double> &normal, bool closed) {
+void GeneratePoints(int N, const std::vector<double> &r, vector<vector<double> > &points, vector<double> &normal, vector<double> &param, bool closed) {
     if(!closed) {
         --N;
     }
@@ -84,10 +106,10 @@ void GeneratePoints(int N, const std::vector<double> &r, vector<vector<double> >
     points.push_back(vector<double>());
     double dt = 1./N;
     for(int i=0; i<N; ++i) {
-        points.push_back(GeometryShape(dt*i, r, normal));
+        points.push_back(GeometryShape(dt*i, r, normal, param));
     }
     if(!closed) {
-        points.push_back(GeometryShape(1., r, normal));
+        points.push_back(GeometryShape(1., r, normal, param));
     }
 }
 
@@ -242,7 +264,7 @@ int main() {
     vector<double> Lspan;
     vector<double> Rspan;
     vector<int> Nspan;
-    GeneratePoints(Np, param, points, normal, CLOSED);
+    GeneratePoints(Np, param, points, normal, param, CLOSED);
     GenerateElements(points, elements, boundCondition, CLOSED);
     GenerateSpans(Np, param[0], spantp, spanpm, Lspan, Rspan, Nspan, CLOSED);
     Output(filename, points, elements, boundCondition, Lspan, Rspan, Nspan);
