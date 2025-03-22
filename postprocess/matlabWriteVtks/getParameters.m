@@ -55,4 +55,4 @@ for n = 1:LBM.nBlock
     end
 end
 %% Calculate key parameters
-nfile  = (LBM.eTime - LBM.sTime) / LBM.dTime + 1;
+nfile = round((LBM.eTime - LBM.sTime) / LBM.dTime) + 1;
