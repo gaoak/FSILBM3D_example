@@ -3,8 +3,8 @@ clear;clc;close all;format long
 isOnlyWriteRootBlock = true;
 isUseMovingGridPost  = false;
 isHalfWayBounceBack  = true;
-isGiveCalculateTime  = [300.1 0.1 305];  % empty means use the parameters in inflow.dat
-casePath  = 'G:\TandemPlates\Validation\Comparison\Case3DTurbulentDNSFiner';
+isGiveCalculateTime  = [];  % empty means use the parameters in inflow.dat
+casePath  = 'G:\TandemPlates\PropellingInTurbulence\RectangleAR1.0F0.00H0.20';
 %% Read key lines
 readLine.ViscLine  = readKeyLines([casePath '\check.dat' ],'Mu'            ,1);
 readLine.UrefLine  = readKeyLines([casePath '\check.dat' ],'Uref'          ,1);
