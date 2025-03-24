@@ -1,18 +1,20 @@
+# 2025.03.24
 Parallel
 # parameter for mpi
  64                                           read(buffer,*) npsize
 EndParallel
 FlowCondition
  1          1                                 read(buffer,*) isConCmpt,numsubstep
- 180.85D+0   18.85D+1                          read(buffer,*) timeSimTotal,timeContiDelta
- 0.000D+0   1000.0D+0                          read(buffer,*) timeWriteBegin,timeWriteEnd
- 30.0D+0   1000.000D+0   1000.000D+0               read(buffer,*) timeWriteFlow,timeWriteBody,timeWriteInfo
- 2400.0D+0   1.000D+0                          read(buffer,*) Re,denIn
- 0.000D+0   0.000D+0   0.015915D+0               read(buffer,*) uvwIn(1:3)
+ 188.5D+0   188.5D+1                          read(buffer,*) timeSimTotal,timeContiDelta
+ 0.000D+0   1000.0D+0                         read(buffer,*) timeWriteBegin,timeWriteEnd
+ 30.00D+0   1000.0D+0   1000.0D+0             read(buffer,*) timeWriteFlow,timeWriteBody,timeWriteInfo
+ 2400.0D+0  1.000D+0                          read(buffer,*) Re,denIn
+ 0.000D+0   0.000D+0   0.015915D+0            read(buffer,*) uvwIn(1:3)
  0.000D+0   0.000D+0   0.000D+0   0           read(buffer,*) shearRateIn(1:3),flow%velocityKind
  0.000D+0   0.000D+0   0.000D+0               read(buffer,*) volumeForceIn(1:3)
  0.000D+0   0.000D+0   0.000D+0               read(buffer,*) volumeForceAmp,volumeForceFreq,volumeForcePhi
- 4         1.00D+0                          read(buffer,*) TrefType,Tref
+ 0          1.000D+0                          read(buffer,*) LrefType,Lref
+ -1         1.000D+0                          read(buffer,*) TrefType,Tref
  -1         0.100D+0                          read(buffer,*) UrefType,Uref
  10         0.010D+0                          read(buffer,*) ntolLBM,dtolLBM
  1                                            read(buffer,*) interpolateScheme
@@ -20,8 +22,8 @@ ENDFlowCondition
 FluidBlocks
  1                                            read(buffer,*) nblock (should be npairs + 1)
  1          1          0          1           read(buffer,*) ID,iCollideModel,offsetOutput,isoutput
- 2001        5       2001                    read(buffer,*) xDim,yDim,zDim
- 0.005D+0  -5.000D+0  0.000D+0 -5.000D+0     read(buffer,*) dh,xmin,ymin,zmin
+ 401        5          401                    read(buffer,*) xDim,yDim,zDim
+ 0.025D+0  -5.000D+0  0.000D+0 -5.000D+0      read(buffer,*) dh,xmin,ymin,zmin
  103   103   301   301   101   103            read(buffer,*) boundaryConditions(1:6) (xmin,xmax,ymin,ymax,zmin,zmax)
  0.25   0   0   0   0   0   0   0   0   0     read(buffer,*) params(1:10)
 =====================
