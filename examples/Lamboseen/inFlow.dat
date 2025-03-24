@@ -1,4 +1,6 @@
 # 2025.03.24
+# https://doi.org/10.1063/1.3220173
+# ISBN 978-3-662-47060-2 978-3-662-47061-9(eBook) Jie-Zhi Wu et al., Vortical Flows, P197, Springer
 Parallel
 # parameter for mpi
  64                                           read(buffer,*) npsize
