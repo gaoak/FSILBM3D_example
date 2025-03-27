@@ -7,7 +7,7 @@ fprintf(fileID, 'VARIABLES = "x" "y" "z"\n');
 for i=1:nSolid
     fprintf(fileID, ' ZONE T = "fish%03d" N = %d, E = %d, DATAPACKING=POINT, ZONETYPE=FEQUADRILATERAL\n',i,solid.nodesV,solid.nodesI);
     for j=1:solid.nodesV
-    fprintf(fileID, ' %f    %f    %f\n',solid.coor{i}(j,1:3));
+    fprintf(fileID, ' %.8f    %.8f    %.8f\n',solid.coor{i}(j,1:3));
     end
     for j=1:solid.nodesI
     fprintf(fileID, ' %d    %d    %d    %d\n',solid.elem(j,1:4));

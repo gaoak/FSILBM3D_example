@@ -1,82 +1,50 @@
 run getParameters.m
-% Read begin point data
-for i = 1:LBM.nSolid
-    fileStruct    = importdata([casePath '\DatInfo\FishNodeBegin_00' num2str(i) '.plt']);
-    fileData      = fileStruct.data;
-    % Update velocity
-    fileData(:,5) = fileData(:,5)  - LBM.UVW(1) / LBM.Uref;
-    fileData(:,6) = fileData(:,6)  - LBM.UVW(2) / LBM.Uref;
-    fileData(:,7) = fileData(:,7)  - LBM.UVW(3) / LBM.Uref;
-    % Write data
-    fileID = fopen([casePath '\DatInfo\FishNodeBegin_00' num2str(i) '_n.plt'], 'w');
-    fprintf(fileID, '%s\n',fileStruct.textdata{1});
-    for j = 1:size(fileData,1)
-        time = fileData(j,1);
-        fileData(j,2) = fileData(j,2)  - LBM.UVW(1) / LBM.Lref * time * LBM.Tref;
-        fileData(j,3) = fileData(j,3)  - LBM.UVW(2) / LBM.Lref * time * LBM.Tref;
-        fileData(j,4) = fileData(j,4)  - LBM.UVW(3) / LBM.Lref * time * LBM.Tref;
-        fprintf(fileID, [repmat('%.8g ', 1, size(fileData,2)), '\n'], fileData(j,:));
-    end
-    fprintf('Writing file read : %s\n', [casePath '\DatInfo\FishNodeBegin_00' num2str(i) '_n.plt'])
+% Set solid index
+group.name = 'Group002';
+group.nums = 270;  % how many solids in the group
+group.indx = 1;  % the index of the extracting solid
+% file paths
+readPath   = [casePath '\DatInfo\'  group.name '_firstNode.dat'];
+writePath  = [casePath '\DatInfo\T' group.name '_firstNode.dat'];
+% check parameters 
+if group.indx > group.nums
+    error('group.indx must less then group.nums')
 end
-% Read center point data
-for i = 1:LBM.nSolid
-    fileStruct    = importdata([casePath '\DatInfo\FishNodeCenter_00' num2str(i) '.plt']);
-    fileData      = fileStruct.data;
-    % Update velocity
-    fileData(:,5) = fileData(:,5)  - LBM.UVW(1) / LBM.Uref;
-    fileData(:,6) = fileData(:,6)  - LBM.UVW(2) / LBM.Uref;
-    fileData(:,7) = fileData(:,7)  - LBM.UVW(3) / LBM.Uref;
-    % Write data
-    fileID = fopen([casePath '\DatInfo\FishNodeCenter_00' num2str(i) '_n.plt'], 'w');
-    fprintf(fileID, '%s\n',fileStruct.textdata{1});
-    for j = 1:size(fileData,1)
-        time = fileData(j,1);
-        fileData(j,2) = fileData(j,2)  - LBM.UVW(1) / LBM.Lref * time * LBM.Tref;
-        fileData(j,3) = fileData(j,3)  - LBM.UVW(2) / LBM.Lref * time * LBM.Tref;
-        fileData(j,4) = fileData(j,4)  - LBM.UVW(3) / LBM.Lref * time * LBM.Tref;
-        fprintf(fileID, [repmat('%.8g ', 1, size(fileData,2)), '\n'], fileData(j,:));
-    end
-    fprintf('Writing file read : %s\n', [casePath '\DatInfo\FishNodeCenter_00' num2str(i) '_n.plt'])
+% Get line numbers
+realLines = readlines(readPath);
+lineCount = length(realLines);
+timeSteps = (lineCount - 2) / (group.nums + 1);
+% Read time steps
+times  = zeros(1,timeSteps);
+fileID = fopen(readPath,'r');
+if fileID == -1
+    error('Cant found file : %s',readPath);
 end
-% Read end point data
-for i = 1:LBM.nSolid
-    fileStruct    = importdata([casePath '\DatInfo\FishNodeEnd_00' num2str(i) '.plt']);
-    fileData      = fileStruct.data;
-    % Update velocity
-    fileData(:,5) = fileData(:,5)  - LBM.UVW(1) / LBM.Uref;
-    fileData(:,6) = fileData(:,6)  - LBM.UVW(2) / LBM.Uref;
-    fileData(:,7) = fileData(:,7)  - LBM.UVW(3) / LBM.Uref;
-    % Write data
-    fileID = fopen([casePath '\DatInfo\FishNodeEnd_00' num2str(i) '_n.plt'], 'w');
-    fprintf(fileID, '%s\n',fileStruct.textdata{1});
-    for j = 1:size(fileData,1)
-        time = fileData(j,1);
-        fileData(j,2) = fileData(j,2)  - LBM.UVW(1) / LBM.Lref * time * LBM.Tref;
-        fileData(j,3) = fileData(j,3)  - LBM.UVW(2) / LBM.Lref * time * LBM.Tref;
-        fileData(j,4) = fileData(j,4)  - LBM.UVW(3) / LBM.Lref * time * LBM.Tref;
-        fprintf(fileID, [repmat('%.8g ', 1, size(fileData,2)), '\n'], fileData(j,:));
+flag = 0;
+variables = strsplit(strtrim(fgetl(fileID)));
+while ~feof(fileID)
+    keyLine = fgetl(fileID);
+    % check the keyword
+    if contains(keyLine, 'time')
+        flag = flag + 1;
+        times(flag) = str2double(keyLine(16:25))/1e5;
     end
-    fprintf('Writing file read : %s\n', [casePath '\DatInfo\FishNodeEnd_00' num2str(i) '_n.plt'])
 end
-% Read averaging data
-for i = 1:LBM.nSolid
-    fileStruct    = importdata([casePath '\DatInfo\FishNodeMean_00' num2str(i) '.plt']);
-    fileData      = fileStruct.data;
-    % Update velocity
-    fileData(:,5) = fileData(:,5)  - LBM.UVW(1) / LBM.Uref;
-    fileData(:,6) = fileData(:,6)  - LBM.UVW(2) / LBM.Uref;
-    fileData(:,7) = fileData(:,7)  - LBM.UVW(3) / LBM.Uref;
-    % Write data
-    fileID = fopen([casePath '\DatInfo\FishNodeMean_00' num2str(i) '_n.plt'], 'w');
-    fprintf(fileID, '%s\n',fileStruct.textdata{1});
-    for j = 1:size(fileData,1)
-        time = fileData(j,1);
-        fileData(j,2) = fileData(j,2)  - LBM.UVW(1) / LBM.Lref * time * LBM.Tref;
-        fileData(j,3) = fileData(j,3)  - LBM.UVW(2) / LBM.Lref * time * LBM.Tref;
-        fileData(j,4) = fileData(j,4)  - LBM.UVW(3) / LBM.Lref * time * LBM.Tref;
-        fprintf(fileID, [repmat('%.8g ', 1, size(fileData,2)), '\n'], fileData(j,:));
-    end
-    fprintf('Writing file read : %s\n', [casePath '\DatInfo\FishNodeMean_00' num2str(i) '_n.plt'])
+indexNum = length(strsplit(strtrim(keyLine)));  % get variable numbers
+dataMarx = zeros(timeSteps,indexNum);
+for step=1:timeSteps
+    lines = (step - 1) * (group.nums + 1) + group.indx + 2;
+    dataMarx(step,:) = str2num(realLines(lines));
 end
+% Rewrite data
+fileID = fopen(writePath,'w');
+fprintf(fileID, ' VARIABLES = "t"');
+for j=1:indexNum-3
+    fprintf(fileID, '  %s',variables{j+5});
+end
+fprintf(fileID, '\n');
+for k=1:timeSteps
+    fprintf(fileID, [repmat('%.8f ', 1, indexNum-2), '\n'], times(k), dataMarx(k,4:indexNum));
+end
+fprintf('Writing file ready : %s\n', writePath)
 fclose all;
