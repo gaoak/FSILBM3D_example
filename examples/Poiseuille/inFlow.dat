@@ -1,31 +1,31 @@
 # 2025.03.20
-# ISBN 978-7-302-24736-4 P49 & wikipedia
+# ISBN 978-7-302-24736-4 P44
 Parallel
 # parameter for mpi
- 16                                           read(buffer,*) npsize
+ 16                                          read(buffer,*) npsize
 EndParallel
 FlowCondition
  1          1                                 read(buffer,*) isConCmpt,numsubstep
- 1.000D+2   2.000D+2                          read(buffer,*) timeSimTotal,timeContiDelta
- 0.000D+0   101.0D+0                          read(buffer,*) timeWriteBegin,timeWriteEnd
- 6.250D+0   6.250D+0   0.78125D+0             read(buffer,*) timeWriteFlow,timeWriteBody,timeWriteInfo
- 10.00D+0   1.000D+0                          read(buffer,*) Re,denIn
- 0.000D+0   0.000D+0   0.000D+0               read(buffer,*) uvwIn(1:3)
- 0.0625D+0   0.00125D+0   0.000D+0     2      read(buffer,*) shearRateIn(1:3)/velocityAmp,velocityFreq,velocityPhi,VelocityKind
- 0.000D+0   0.000D+0   0.000D+0               read(buffer,*) volumeForceIn(1:3)
- -4.90873852123405D-4   0.00125D+0   0.000D+0 read(buffer,*) volumeForceAmp,volumeForceFreq,volumeForcePhi
+ 120.0D+0   2.000D+2                          read(buffer,*) timeSimTotal,timeContiDelta
+ 0.000D+0   200.0D+0                          read(buffer,*) timeWriteBegin,timeWriteEnd
+ 2.000D+0   0.010D+0   0.010D+0               read(buffer,*) timeWriteFlow,timeWriteBody,timeWriteInfo
+ 5.000D+0   1.000D+0                          read(buffer,*) Re,denIn
+ 0.100D+0   0.000D+0   0.000D+0               read(buffer,*) uvwIn(1:3)
+ 0.000D+0   0.000D+0   0.000D+0     0         read(buffer,*) shearRateIn(1:3)/velocityAmp,velocityFreq,velocityPhi,VelocityKind
+ 0.00016D+0   0.000D+0   0.000D+0             read(buffer,*) volumeForceIn(1:3)
+ 0.000D+0   0.000D+0   0.000D+0               read(buffer,*) volumeForceAmp,volumeForceFreq,volumeForcePhi
  0          1.000D+0                          read(buffer,*) LrefType,Lref
  0          100.0D+0                          read(buffer,*) TrefType,Tref
- 4          0.100D+0                          read(buffer,*) UrefType,Uref
+ 0          0.100D+0                          read(buffer,*) UrefType,Uref
  1          0.010D+0                          read(buffer,*) ntolLBM,dtolLBM
- 1                                            read(buffer,*) interpolateScheme
+ 2                                            read(buffer,*) interpolateScheme
 ENDFlowCondition
 FluidBlocks
  1                                            read(buffer,*) nblock (should be npairs + 1)
  1          1          0          1           read(buffer,*) ID,iCollideModel,offsetOutput,isoutput
- 41        80        5                     read(buffer,*) xDim,yDim,zDim
- 0.250D+0  -5.000D+0   0.125D+0  0.000D+0     read(buffer,*) dh,xmin,ymin,zmin
- 301   301   203   204   301   301            read(buffer,*) boundaryConditions(1:6) (xmin,xmax,ymin,ymax,zmin,zmax)
+ 21        10          5                     read(buffer,*) xDim,yDim,zDim
+ 1.000D+0  -5.000D+0   -4.500D+0  0.000D+0     read(buffer,*) dh,xmin,ymin,zmin
+ 301   301   203    203     301   301            read(buffer,*) boundaryConditions(1:6) (xmin,xmax,ymin,ymax,zmin,zmax)
  0.00   0   0   0   0   0   0   0   0   0     read(buffer,*) params(1:10)
 =====================
 ENDFluidBlocks
@@ -50,6 +50,7 @@ SolidBody
  0.000D+0   0.000D+0   0.000D+0               read(buffer,*) initXYZVel(1:3,iFish)
  0.000D+0   0.000D+0   0.000D+0               read(buffer,*) XYZAmpl(1:3,iFish)
  0.000D+0   0.000D+0   0.000D+0               read(buffer,*) XYZPhi(1:3,iFish)
+ 0.000D+0   0.000D+0   0.000D+0               read(buffer,*) XYZPhi(1:3,iFish)
  # angle in degree
  0.000D+0   0.000D+0   0.000D+0               read(buffer,*) AoAo(1:3,iFish)
  0.000D+0   0.000D+0   0.000D+0               read(buffer,*) AoAAmpl(1:3,iFish)
@@ -58,7 +59,7 @@ SolidBody
 ENDSolidBody
 ProbingFluid
  0          1                                 read(buffer,*) fluidProbingNum (0: no output),inWhichBlock 
- 0.000D+0   1.000D+0   0.250D+0               read(buffer,*) fluidProbingCoords(1,1:3)
+ 0.000D+0   0.625D+0   0.000D+0               read(buffer,*) fluidProbingCoords(1,1:3)
 ProbingSolid
  0                                            read(buffer,*) solidProbingNum (0: no output)
  50                                          read(buffer,*) solidProbingNode(1)

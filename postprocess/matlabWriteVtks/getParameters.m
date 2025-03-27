@@ -3,7 +3,7 @@ clear;clc;close all;format long
 isOnlyWriteRootBlock = true;
 isUseMovingGridPost  = false;
 isHalfWayBounceBack  = false;
-isGiveCalculateTime  = [0 0.1 0];  % empty means use the parameters in inflow.dat
+isGiveCalculateTime  = [];  % empty means use the parameters in inflow.dat
 casePath  = 'G:\TandemPlates\FlapsArrayInTurbulence\TestCase';
 %% Read key lines
 if ~isfile([casePath '\check.dat' ])
