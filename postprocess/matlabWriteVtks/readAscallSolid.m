@@ -4,11 +4,11 @@ if fileID == -1
     error('Cant found file : %s',filePath);
 end
 title = fgetl(fileID);  % variable titles
-title = fgetl(fileID);  % read the first zone information
-string= strsplit(title);
+zones = fgetl(fileID);  % read the first zone information
+string= strsplit(strtrim(zones));
 % Read paramters
-solid.nodesV = str2double(string{7 }(1:end-1)); % the node number in the virtual plate
-solid.nodesI = str2double(string{10}(1:end-1)); % the node number in the initial plate
+solid.nodesV = str2double(strrep(string{7 },',','')); % the node number in the virtual plate
+solid.nodesI = str2double(strrep(string{10},',','')); % the node number in the initial plate
 % Read data
 for i=1:nSolid
     if i==1
