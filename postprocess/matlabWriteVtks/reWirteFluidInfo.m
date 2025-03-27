@@ -17,7 +17,9 @@ for i = LBM.nBlock:-1:1
     end
 end
 % Write mesh data in vtks
-% writeFluidVTK(meshFather,writeNameFather)
+if LBM.nBlock>1
+    writeFluidVTK(meshFather,writeNameFather)
+end
 % Calculate space averaging data
 meanData.u  = mean(mean(meshFather.u, 1),3) * LBM.Uref;
 meanData.v  = mean(mean(meshFather.v, 1),3) * LBM.Uref;
@@ -46,13 +48,13 @@ end
 % Calculate averaging turbulent parameters
 turbulent.tau_w   = LBM.Mu * meanData.u(firstGrid) / h0;                 % μ*u_0/y_0
 turbulent.u_tau   = sqrt(turbulent.tau_w / LBM.denIn);                   % sqrt(τ_w/ρ)
+turbulent.y_plus  = turbulent.u_tau * y_coor(1,:) * LBM.denIn / LBM.Mu;  % y*u_τ/ν
 turbulent.Re_tau  = turbulent.u_tau * LBM.Lref * LBM.denIn / LBM.Mu;
 fprintf('Calculate Re_tau: %s\n',turbulent.Re_tau)
-turbulent.y_plus  = turbulent.u_tau * y_coor(1,:) * LBM.denIn / LBM.Mu;  % y*u_τ/ν
 % Calculate first order statistic
-turbulent.u_plus  = meanData.u / turbulent.u_tau;
-turbulent.v_plus  = meanData.v / turbulent.u_tau;
-turbulent.w_plus  = meanData.w / turbulent.u_tau;
+turbulent.u_plus  = meanData.u  / turbulent.u_tau;
+turbulent.v_plus  = meanData.v  / turbulent.u_tau;
+turbulent.w_plus  = meanData.w  / turbulent.u_tau;
 % Calculate second order statistic
 turbulent.uu_plus = meanData.uu / turbulent.u_tau / turbulent.u_tau;
 turbulent.vv_plus = meanData.vv / turbulent.u_tau / turbulent.u_tau;
