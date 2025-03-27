@@ -2,22 +2,28 @@ clear;clc;close all;format long
 %% Case path
 isOnlyWriteRootBlock = true;
 isUseMovingGridPost  = false;
-isHalfWayBounceBack  = true;
+isHalfWayBounceBack  = false;
 isGiveCalculateTime  = [];  % empty means use the parameters in inflow.dat
-casePath  = 'G:\TandemPlates\PropellingInTurbulence\RectangleAR1.0F0.00H0.20';
+casePath  = 'G:\TandemPlates\FlapsArrayInTurbulence\TestCase';
 %% Read key lines
-readLine.ViscLine  = readKeyLines([casePath '\check.dat' ],'Mu'            ,1);
-readLine.UrefLine  = readKeyLines([casePath '\check.dat' ],'Uref'          ,1);
-readLine.TrefLine  = readKeyLines([casePath '\check.dat' ],'Tref'          ,1);
-readLine.LrefLine  = readKeyLines([casePath '\check.dat' ],'Lref'          ,1);
-readLine.blockLine = readKeyLines([casePath '\check.dat' ],'sonBlocks'     ,1);
-readLine.densLine  = readKeyLines([casePath '\inFlow.dat'],'denIn'         ,1);
-readLine.UVWlLine  = readKeyLines([casePath '\inFlow.dat'],'uvwIn'         ,1);
-readLine.solidLine = readKeyLines([casePath '\inFlow.dat'],'nFish'         ,1);
-readLine.fluidLine = readKeyLines([casePath '\inFlow.dat'],'nblock'        ,1);
-readLine.TimeLine  = readKeyLines([casePath '\inFlow.dat'],'timeWriteBegin',1);
-readLine.TotalLine = readKeyLines([casePath '\inFlow.dat'],'timeSimTotal'  ,1);
-readLine.deltaLine = readKeyLines([casePath '\inFlow.dat'],'timeWriteFlow' ,1); 
+if ~isfile([casePath '\check.dat' ])
+    error('Can not found check file! : %s',[casePath '\check.dat' ]);
+end
+if ~isfile([casePath '\inFlow.dat'])
+    error('Can not found inflow file! : %s',[casePath '\inFlow.dat']);
+end
+readLine.ViscLine  = readAscallLines([casePath '\check.dat' ],'Mu'            ,1);
+readLine.UrefLine  = readAscallLines([casePath '\check.dat' ],'Uref'          ,1);
+readLine.TrefLine  = readAscallLines([casePath '\check.dat' ],'Tref'          ,1);
+readLine.LrefLine  = readAscallLines([casePath '\check.dat' ],'Lref'          ,1);
+readLine.blockLine = readAscallLines([casePath '\check.dat' ],'sonBlocks'     ,1);
+readLine.densLine  = readAscallLines([casePath '\inFlow.dat'],'denIn'         ,1);
+readLine.UVWlLine  = readAscallLines([casePath '\inFlow.dat'],'uvwIn'         ,1);
+readLine.solidLine = readAscallLines([casePath '\inFlow.dat'],'nFish'         ,1);
+readLine.fluidLine = readAscallLines([casePath '\inFlow.dat'],'nblock'        ,1);
+readLine.TimeLine  = readAscallLines([casePath '\inFlow.dat'],'timeWriteBegin',1);
+readLine.TotalLine = readAscallLines([casePath '\inFlow.dat'],'timeSimTotal'  ,1);
+readLine.deltaLine = readAscallLines([casePath '\inFlow.dat'],'timeWriteFlow' ,1); 
 if str2double(readLine.deltaLine{1}) ~= str2double(readLine.deltaLine{2})
     warning('solid writing interval %f does not equal fluid writing interval %f!',str2double(deltaLine{1}),str2double(deltaLine{2}))
 end
@@ -45,7 +51,7 @@ else
     LBM.dTime  = str2double(readLine.deltaLine{1}); % writing intervl
 end
 for n = 1:LBM.nBlock
-    blockLine = readKeyLines([casePath '\check.dat'],'sonBlocks',n);
+    blockLine = readAscallLines([casePath '\check.dat'],'sonBlocks',n);
     if length(blockLine) <= 2
         LBM.meshContain{n} = [];
     else
