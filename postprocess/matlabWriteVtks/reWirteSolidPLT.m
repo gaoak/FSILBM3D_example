@@ -1,4 +1,5 @@
 run getParameters.m
+% only for moving girds
 %% File serises
 readPath  = [casePath '\DatBodySpan\'];
 writePath = [casePath '\DatBodySpan\'];

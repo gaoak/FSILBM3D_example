@@ -1,9 +1,9 @@
 clear;clc;close all;format long
 %% Case path
 isOnlyWriteRootBlock = true;
-isUseMovingGridPost  = false;
+isUseMovingGridPost  = false;  % only for moving girds
 isHalfWayBounceBack  = false;
-isGiveCalculateTime  = [];  % empty means use the parameters in inflow.dat
+isGiveCalculateTime  = [0 0.1 0];  % empty means use the parameters in inflow.dat
 casePath  = 'G:\TandemPlates\FlapsArrayInTurbulence\TestCase';
 %% Read key lines
 if ~isfile([casePath '\check.dat' ])

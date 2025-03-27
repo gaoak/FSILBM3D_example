@@ -1,82 +1,29 @@
 run getParameters.m
-% Read begin point data
-for i = 1:LBM.nSolid
-    fileStruct    = importdata([casePath '\DatInfo\FishNodeBegin_00' num2str(i) '.plt']);
-    fileData      = fileStruct.data;
-    % Update velocity
-    fileData(:,5) = fileData(:,5)  - LBM.UVW(1) / LBM.Uref;
-    fileData(:,6) = fileData(:,6)  - LBM.UVW(2) / LBM.Uref;
-    fileData(:,7) = fileData(:,7)  - LBM.UVW(3) / LBM.Uref;
-    % Write data
-    fileID = fopen([casePath '\DatInfo\FishNodeBegin_00' num2str(i) '_n.plt'], 'w');
-    fprintf(fileID, '%s\n',fileStruct.textdata{1});
-    for j = 1:size(fileData,1)
-        time = fileData(j,1);
-        fileData(j,2) = fileData(j,2)  - LBM.UVW(1) / LBM.Lref * time * LBM.Tref;
-        fileData(j,3) = fileData(j,3)  - LBM.UVW(2) / LBM.Lref * time * LBM.Tref;
-        fileData(j,4) = fileData(j,4)  - LBM.UVW(3) / LBM.Lref * time * LBM.Tref;
-        fprintf(fileID, [repmat('%.8g ', 1, size(fileData,2)), '\n'], fileData(j,:));
-    end
-    fprintf('Writing file read : %s\n', [casePath '\DatInfo\FishNodeBegin_00' num2str(i) '_n.plt'])
+% Set solid index
+group.name = 'Group002';
+group.nums = 270;  % how many solids in the group
+group.indx = 1;  % the index of the extracting solid
+% Get line numbers
+filePath  = [casePath '\DatInfo\' group.name '_firstNode.plt'];
+lineCount = length(readlines(filePath));
+timeSteps = (lineCount - 2) / (group.nums + 1);
+% Read time steps
+times  = zeros(1,timeSteps);
+fileID = fopen(filePath,'r');
+if fileID == -1
+    error('Cant found file : %s',filePath);
 end
-% Read center point data
-for i = 1:LBM.nSolid
-    fileStruct    = importdata([casePath '\DatInfo\FishNodeCenter_00' num2str(i) '.plt']);
-    fileData      = fileStruct.data;
-    % Update velocity
-    fileData(:,5) = fileData(:,5)  - LBM.UVW(1) / LBM.Uref;
-    fileData(:,6) = fileData(:,6)  - LBM.UVW(2) / LBM.Uref;
-    fileData(:,7) = fileData(:,7)  - LBM.UVW(3) / LBM.Uref;
-    % Write data
-    fileID = fopen([casePath '\DatInfo\FishNodeCenter_00' num2str(i) '_n.plt'], 'w');
-    fprintf(fileID, '%s\n',fileStruct.textdata{1});
-    for j = 1:size(fileData,1)
-        time = fileData(j,1);
-        fileData(j,2) = fileData(j,2)  - LBM.UVW(1) / LBM.Lref * time * LBM.Tref;
-        fileData(j,3) = fileData(j,3)  - LBM.UVW(2) / LBM.Lref * time * LBM.Tref;
-        fileData(j,4) = fileData(j,4)  - LBM.UVW(3) / LBM.Lref * time * LBM.Tref;
-        fprintf(fileID, [repmat('%.8g ', 1, size(fileData,2)), '\n'], fileData(j,:));
+flag = 0;
+while ~feof(fileID)
+    keyLine = fgetl(fileID);
+    % check the keyword
+    if contains(keyLine, 'time')
+        flag = flag + 1;
+        times(flag) = str2double(keyLine(16:25))/1e5;
     end
-    fprintf('Writing file read : %s\n', [casePath '\DatInfo\FishNodeCenter_00' num2str(i) '_n.plt'])
 end
-% Read end point data
-for i = 1:LBM.nSolid
-    fileStruct    = importdata([casePath '\DatInfo\FishNodeEnd_00' num2str(i) '.plt']);
-    fileData      = fileStruct.data;
-    % Update velocity
-    fileData(:,5) = fileData(:,5)  - LBM.UVW(1) / LBM.Uref;
-    fileData(:,6) = fileData(:,6)  - LBM.UVW(2) / LBM.Uref;
-    fileData(:,7) = fileData(:,7)  - LBM.UVW(3) / LBM.Uref;
-    % Write data
-    fileID = fopen([casePath '\DatInfo\FishNodeEnd_00' num2str(i) '_n.plt'], 'w');
-    fprintf(fileID, '%s\n',fileStruct.textdata{1});
-    for j = 1:size(fileData,1)
-        time = fileData(j,1);
-        fileData(j,2) = fileData(j,2)  - LBM.UVW(1) / LBM.Lref * time * LBM.Tref;
-        fileData(j,3) = fileData(j,3)  - LBM.UVW(2) / LBM.Lref * time * LBM.Tref;
-        fileData(j,4) = fileData(j,4)  - LBM.UVW(3) / LBM.Lref * time * LBM.Tref;
-        fprintf(fileID, [repmat('%.8g ', 1, size(fileData,2)), '\n'], fileData(j,:));
-    end
-    fprintf('Writing file read : %s\n', [casePath '\DatInfo\FishNodeEnd_00' num2str(i) '_n.plt'])
-end
-% Read averaging data
-for i = 1:LBM.nSolid
-    fileStruct    = importdata([casePath '\DatInfo\FishNodeMean_00' num2str(i) '.plt']);
-    fileData      = fileStruct.data;
-    % Update velocity
-    fileData(:,5) = fileData(:,5)  - LBM.UVW(1) / LBM.Uref;
-    fileData(:,6) = fileData(:,6)  - LBM.UVW(2) / LBM.Uref;
-    fileData(:,7) = fileData(:,7)  - LBM.UVW(3) / LBM.Uref;
-    % Write data
-    fileID = fopen([casePath '\DatInfo\FishNodeMean_00' num2str(i) '_n.plt'], 'w');
-    fprintf(fileID, '%s\n',fileStruct.textdata{1});
-    for j = 1:size(fileData,1)
-        time = fileData(j,1);
-        fileData(j,2) = fileData(j,2)  - LBM.UVW(1) / LBM.Lref * time * LBM.Tref;
-        fileData(j,3) = fileData(j,3)  - LBM.UVW(2) / LBM.Lref * time * LBM.Tref;
-        fileData(j,4) = fileData(j,4)  - LBM.UVW(3) / LBM.Lref * time * LBM.Tref;
-        fprintf(fileID, [repmat('%.8g ', 1, size(fileData,2)), '\n'], fileData(j,:));
-    end
-    fprintf('Writing file read : %s\n', [casePath '\DatInfo\FishNodeMean_00' num2str(i) '_n.plt'])
-end
+
+% Rewrite forces
+% keyLine = strrep(keyLine, 'D', 'E');
+% keyLine = strrep(keyLine, 'd', 'E');
 fclose all;

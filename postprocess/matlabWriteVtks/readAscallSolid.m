@@ -1,10 +1,14 @@
 function [solid] = readAscallSolid(filePath,nSolid,time,initialVelocity,Lref,Tref)
-if ~isfile(filePath)
-    error('Can not found solid mesh files! : %s',filePath);
+fileID = fopen(filePath,'r');
+if fileID == -1
+    error('Cant found file : %s',filePath);
 end
+title = fgetl(fileID);  % variable titles
+title = fgetl(fileID);  % read the first zone information
+string= strsplit(title);
 % Read paramters
-solid.nodesV = floor(size(importdata(filePath).data,1)/2) + 1; % the node number in the virtual plate
-solid.nodesI = floor(solid.nodesV/2) - 1;                      % the node number in the initial plate
+solid.nodesV = str2double(string{7 }(1:end-1)); % the node number in the virtual plate
+solid.nodesI = str2double(string{10}(1:end-1)); % the node number in the initial plate
 % Read data
 for i=1:nSolid
     if i==1
