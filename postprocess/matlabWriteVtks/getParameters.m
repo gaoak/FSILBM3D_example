@@ -1,10 +1,10 @@
 clear;clc;close all;format long
 %% Case path
-isOnlyWriteRootBlock = true;
+isOnlyWriteRootBlock = false;
 isUseMovingGridPost  = false;  % only for moving girds
 isHalfWayBounceBack  = false;
-isGiveCalculateTime  = [0 0.1 0];  % empty means use the parameters in inflow.dat
-casePath  = 'G:\TandemPlates\FlapsArrayInTurbulence\TestCase';
+isGiveCalculateTime  = [];  % empty means use the parameters in inflow.dat
+casePath = 'G:\TandemPlates\MovingWingAcrossFlaps\TriangularAngle30\Re200Nx30Nz20H1.60K0.02';
 %% Read key lines
 if ~isfile([casePath '\check.dat' ])
     error('Can not found check file! : %s',[casePath '\check.dat' ]);
@@ -62,3 +62,11 @@ for n = 1:LBM.nBlock
 end
 %% Calculate key parameters
 nfile = round((LBM.eTime - LBM.sTime) / LBM.dTime) + 1;
+%% Set my color map
+color.Map1 = zeros(256,3);
+for n = 1:128
+   color.Map1(n,:)     = [0,0,1] + [1,1,0]*n/128;
+end
+for n = 1:128
+   color.Map1(n+128,:) = [1,1,1] - [0,1,1]*n/128;
+end
