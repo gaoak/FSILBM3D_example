@@ -50,6 +50,14 @@ vector<double> InvertHorizontalLine(double t, double r, vector<double> &param) {
     return res;
 }
 
+vector<double> SpanwiseLine(double t, double r) {
+    vector<double> res(3);
+    res[0] = 0.;
+    res[1] = 0.;
+    res[2] = r*t;
+    return res;
+}
+
 vector<double> HorizontalCos(double t, const std::vector<double> &r) {
     vector<double> res(3);
     res[0] = t*r[0];
@@ -84,9 +92,12 @@ vector<double> GeometryShape(double t, const std::vector<double> &r, vector<doub
         p = InvertHorizontalLine(t, r[0], param);
     }
     else if (GEOMTYPE == 5) {
-        p = HorizontalCos(t, r);
+        p = SpanwiseLine(t, r[0]);
     }
     else if (GEOMTYPE == 6) {
+        p = HorizontalCos(t, r);
+    }
+    else if (GEOMTYPE == 7) {
         p = HorizontalSquare(t, r);
     }
     else {

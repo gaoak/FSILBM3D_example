@@ -1,4 +1,4 @@
-for folder in DatBodySpan DatInfo DatBody DatFlow 
+for folder in DatBodySpan DatInfo DatBody DatFlow DatContinue
 do
   if [[ -d $folder ]]; then
     rm -r $folder
