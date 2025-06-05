@@ -1,7 +1,7 @@
 run getParameters.m
 % Set solid index
-group.name = 'Group002';
-group.info = 'lastNode';
+group.name = 'Group001';
+group.info = 'nodeAverage';
 % which file to extract
 readPath   = [casePath '\DatInfo\' group.name '_' group.info '.dat'];
 timePath   = [casePath '\DatInfo\' group.name '_' group.info '_time.dat'];
@@ -60,7 +60,7 @@ fprintf(fileID3, '\n');
 group.mean = zeros(timeStep,variables.nums);
 for i=1:timeStep
     for j=1:group.nums
-        group.mean(i,:) = group.mean(i,:) + group.data{i,j};
+        group.mean(i,:) = group.mean(i,:) + abs(group.data{i,j});
     end
 end
 for k=1:timeStep

@@ -3,8 +3,8 @@ clear;clc;close all;format long
 isOnlyWriteRootBlock = false;
 isUseMovingGridPost  = false;  % only for moving girds
 isHalfWayBounceBack  = false;
-isGiveCalculateTime  = [];  % empty means use the parameters in inflow.dat
-casePath = 'G:\TandemPlates\MovingWingAcrossFlaps\TriangularAngle30\Re200Nx30Nz20H1.60K0.02';
+isGiveCalculateTime  = [];  % empty means using the parameters in inflow.dat
+casePath = 'G:\NearWallCases\CodeValidations\Park2017PoF';
 %% Read key lines
 if ~isfile([casePath '\check.dat' ])
     error('Can not found check file! : %s',[casePath '\check.dat' ]);
