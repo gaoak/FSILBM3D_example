@@ -8,7 +8,7 @@ for n = 1:nfile
         sonBlocks = length(LBM.meshContain{i});
         % Read father mesh data
         [readNameFather, writeNameFather] = generateFilePath(readPath,writePath,time,i,0);
-        meshFather = readBinaryFluid(readNameFather,time,LBM.UVW,LBM.Uref,LBM.Lref,LBM.Tref);  
+        meshFather = readBinaryFluid(readNameFather,time,LBM.UVW,LBM.Uref,LBM.Lref,LBM.Tref,LBM.Pref);  
         % Read son mesh data
         for j = 1:sonBlocks
             [readNameSon, writeNameSon] = generateFilePath(readPath,writePath,time,LBM.meshContain{i}(j),0);

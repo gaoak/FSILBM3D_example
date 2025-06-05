@@ -25,6 +25,12 @@ fprintf(fid, 'VECTORS velocity float\n');
 velocity = [mesh.u(:), mesh.v(:), mesh.w(:)]';
 fwrite(fid, velocity(:), 'float32', 'ieee-be');
 
+% Write pressure
+fprintf(fid, 'SCALARS pressure float 1\n');
+fprintf(fid, 'LOOKUP_TABLE default\n');
+pressure = single(mesh.p(:))';
+fwrite(fid, pressure, 'float32', 'ieee-be');
+
 % Close the file
 fprintf('Writing ready : %s\n', writeFile)
 fclose all;

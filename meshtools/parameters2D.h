@@ -22,12 +22,12 @@ std::vector<int> NyFMesh{  10, 410, 680};
 /// filament.cpp
 /// user defined parameters
 #define CLOSED false
-#define NPOINTS 51
+#define NPOINTS 101
 #define GEOMTYPE 3    // 0 cylinder; 1 vertical line; 2 invert vertical line; 3 horizontal line; 4 invert horizontal line; 5 spanwise line; 6 horizontal cos; 7 horizontal square wave
 std::vector<double> filaparams{1.0, 0, 0}; //length, amplitude, length1, length2
 std::vector<double> normal{0, 0, 1}; // extension direction
 std::vector<int> spantype{0, 0}; // right(0 const; 1 oblique line; 2 ellipse; 3 cos; 4 sawtooth), left(...)
-std::vector<std::vector<double>> spanparams{{0.0, 0.866025, 0.50, 0.2928}, {0.02, 0.866025, 0.50, 0.2908}}; 
+std::vector<std::vector<double>> spanparams{{0.0, 0.866025, 0.50, 0.2928}, {0.01, 0.866025, 0.50, 0.2908}}; 
 //0 const    left(leading span length, none, none, none), right(...)
 //1 oblique  left(leading span length, slope, none, none), right(...)
 //2 ellipse  left(leading span length, chord center, chord radius, spanwise radius), right(...)
