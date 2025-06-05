@@ -4,7 +4,7 @@ isOnlyWriteRootBlock = false;
 isUseMovingGridPost  = false;  % only for moving girds
 isHalfWayBounceBack  = false;
 isGiveCalculateTime  = [];  % empty means using the parameters in inflow.dat
-casePath = 'G:\NearWallCases\CodeValidations\Park2017PoF';
+casePath = 'G:\NearWallCases\CodeValidations\GridResolution\FinerGridN050T05000';
 %% Read key lines
 if ~isfile([casePath '\check.dat' ])
     error('Can not found check file! : %s',[casePath '\check.dat' ]);
@@ -16,6 +16,7 @@ readLine.ViscLine  = readAscallLines([casePath '\check.dat' ],'Mu'            ,1
 readLine.UrefLine  = readAscallLines([casePath '\check.dat' ],'Uref'          ,1);
 readLine.TrefLine  = readAscallLines([casePath '\check.dat' ],'Tref'          ,1);
 readLine.LrefLine  = readAscallLines([casePath '\check.dat' ],'Lref'          ,1);
+readLine.PresLine  = readAscallLines([casePath '\check.dat' ],'Pref'          ,1);
 readLine.blockLine = readAscallLines([casePath '\check.dat' ],'sonBlocks'     ,1);
 readLine.densLine  = readAscallLines([casePath '\inFlow.dat'],'denIn'         ,1);
 readLine.UVWlLine  = readAscallLines([casePath '\inFlow.dat'],'uvwIn'         ,1);
@@ -33,6 +34,7 @@ LBM.denIn  = str2double(readLine.densLine{2}); % fluid density
 LBM.Uref   = str2double(readLine.UrefLine{3}); % reference velocity
 LBM.Tref   = str2double(readLine.TrefLine{3}); % reference time
 LBM.Lref   = str2double(readLine.LrefLine{3}); % reference length
+LBM.Pref   = str2double(readLine.PresLine{3}); % reference pressure
 LBM.nBlock = floor(str2double(readLine.fluidLine{1})); % the number of fluid blocks
 LBM.nSolid = floor(str2double(readLine.solidLine{1})); % the number of solids
 LBM.meshContain = cell(LBM.nBlock); % the contian relationship of the fluid blocks, the space means no son block

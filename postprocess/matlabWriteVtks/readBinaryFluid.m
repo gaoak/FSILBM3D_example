@@ -1,4 +1,4 @@
-function [mesh] = readBinaryFluid(filePath,time,inflowVelocity,Uref,Lref,Tref)
+function [mesh] = readBinaryFluid(filePath,time,inflowVelocity,Uref,Lref,Tref,Pref)
 % Open file
 fileID = fopen(filePath,'r');
 if fileID == -1
@@ -14,7 +14,7 @@ mesh.ymin = fread(fileID, 1, 'double') / Lref  - inflowVelocity(2) / Lref * time
 mesh.zmin = fread(fileID, 1, 'double') / Lref  - inflowVelocity(3) / Lref * time * Tref;
 mesh.dh   = fread(fileID, 1, 'double') / Lref ;
 % Read pressure and velocities
-p  = fread(fileID, mesh.nz * mesh.ny * mesh.nx, 'float32');
+p  = fread(fileID, mesh.nz * mesh.ny * mesh.nx, 'float32') / Pref;
 u  = fread(fileID, mesh.nz * mesh.ny * mesh.nx, 'float32') - inflowVelocity(1) / Uref; % k,j,i
 v  = fread(fileID, mesh.nz * mesh.ny * mesh.nx, 'float32') - inflowVelocity(2) / Uref; % dimensionless
 w  = fread(fileID, mesh.nz * mesh.ny * mesh.nx, 'float32') - inflowVelocity(3) / Uref;
