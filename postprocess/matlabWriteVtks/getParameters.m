@@ -1,13 +1,15 @@
 clear;clc;close all;format long
 %% Case path
-isOnlyWriteRootBlock = false;
-isUseMovingGridPost  = false;  % only for moving girds
+isOnlyWriteRootBlock = true;
+isUseMovingGridPost  = true;  
+% only for moving girds
 isHalfWayBounceBack  = false;
-isGiveCalculateTime  = [];  % empty means using the parameters in inflow.dat
-casePath = 'G:\NearWallCases\CodeValidations\GridResolution\FinerGridN050T05000';
+isGiveCalculateTime  = [];  
+% empty means using the parameters in inflow.dat
+casePath = 'G:\TandemPlates\Propelling\Self-proelledPlateTest1';
 %% Read key lines
 if ~isfile([casePath '\check.dat' ])
-    error('Can not found check file! : %s',[casePath '\check.dat' ]);
+    error('Can not found check file! : %s' ,[casePath '\check.dat' ]);
 end
 if ~isfile([casePath '\inFlow.dat'])
     error('Can not found inflow file! : %s',[casePath '\inFlow.dat']);
