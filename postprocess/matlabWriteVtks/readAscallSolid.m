@@ -14,14 +14,12 @@ for i=1:nSolid
     if i==1
         cLine0 = i + 2;
         cLine1 = cLine0 + solid.nodesV - 1;
-        eLine0 = cLine1 + 1;
-        eLine1 = eLine0 + solid.nodesI - 1;
     else
         cLine0 = cLine1 + solid.nodesI + 2;
         cLine1 = cLine0 + solid.nodesV - 1;
-        eLine0 = eLine1 + solid.nodesI + 2;
-        eLine1 = eLine0 + solid.nodesI - 1;
     end
+    eLine0 = cLine1 + 1;
+    eLine1 = eLine0 + solid.nodesI - 1;
     solid.coor{i} = readmatrix(filePath, 'Range', [cLine0 1 cLine1 3]);
     solid.elem{i} = readmatrix(filePath, 'Range', [eLine0 1 eLine1 4]);
     % Update coordinates
