@@ -12,7 +12,7 @@ for n = 1:nfile
         % Read son mesh data
         for j = 1:sonBlocks
             [readNameSon, writeNameSon] = generateFilePath(readPath,writePath,time,LBM.meshContain{i}(j),0);
-            meshSon = readBinaryFluid(readNameSon,time,LBM.UVW,LBM.Uref,LBM.Lref,LBM.Tref); 
+            meshSon = readBinaryFluid(readNameSon,time,LBM.UVW,LBM.Uref,LBM.Lref,LBM.Tref,LBM.Pref); 
             % Update mesh data in coarse mesh
             meshFather = finerToCoarse(meshSon,meshFather);
             fprintf('deliver data from block %d to block %d\n',LBM.meshContain{i}(j),i)

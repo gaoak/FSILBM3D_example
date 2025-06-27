@@ -10,7 +10,7 @@ for i=1:nSolid
     fprintf(fileID, ' %.8f    %.8f    %.8f\n',solid.coor{i}(j,1:3));
     end
     for j=1:solid.nodesI
-    fprintf(fileID, ' %d    %d    %d    %d\n',solid.elem(j,1:4));
+    fprintf(fileID, ' %d    %d    %d    %d\n',solid.elem{i}(j,1:4));
     end
 end
 % Close the file

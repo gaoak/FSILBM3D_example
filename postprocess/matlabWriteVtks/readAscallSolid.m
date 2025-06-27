@@ -19,13 +19,15 @@ for i=1:nSolid
     else
         cLine0 = cLine1 + solid.nodesI + 2;
         cLine1 = cLine0 + solid.nodesV - 1;
+        eLine0 = eLine1 + solid.nodesI + 2;
+        eLine1 = eLine0 + solid.nodesI - 1;
     end
     solid.coor{i} = readmatrix(filePath, 'Range', [cLine0 1 cLine1 3]);
+    solid.elem{i} = readmatrix(filePath, 'Range', [eLine0 1 eLine1 4]);
     % Update coordinates
     solid.coor{i}(:,1) = solid.coor{i}(:,1) - initialVelocity(1) / Lref * time * Tref;  % dimensionless  
     solid.coor{i}(:,2) = solid.coor{i}(:,2) - initialVelocity(2) / Lref * time * Tref;
     solid.coor{i}(:,3) = solid.coor{i}(:,3) - initialVelocity(3) / Lref * time * Tref;
     fprintf('Read fish number ready : %d\n', i)
 end
-solid.elem = readmatrix(filePath, 'Range', [eLine0 1 eLine1 4]);
 end
