@@ -57,7 +57,7 @@ group.ds = sqrt(group.dx.*group.dx + group.dy.*group.dy + group.dz.*group.dz);
 temp.deltax = group.xlim(2) - group.xlim(1);
 temp.deltaz = group.zlim(2) - group.zlim(1);
 temp.deltat = times(2) - times(1);                   
-temp.xCoord = (-group.nx:group.nx-1)/(temp.deltax*group.nx*2);  % add zero elements
+temp.xCoord = (-group.nx:group.nx-1)/(temp.deltax*group.nx*2);  
 temp.zCoord = (-group.nz:group.nz-1)/(temp.deltaz*group.nz*2);
 temp.times  = (-timeStep:timeStep-1)/(temp.deltat*timeStep*2);
 % Creat folder
@@ -68,7 +68,7 @@ if ~exist([casePath '\DatFigures\PostFFT2D'],'dir')
 end
 %% FFT2D in space (x,z)
 timeNumber = 600;  % space data in which time
-fourier.spaceData  = zeros(group.nz*2,group.nx*2);
+fourier.spaceData  = zeros(group.nz*2,group.nx*2); % add zero elements
 fourier.spaceData(1:group.nz,1:group.nx) = group.ds(:,:,timeNumber)-mean(mean(group.ds(:,:,timeNumber))); % remove zero frequency components
 fourier.spaceTrans = fft2(fourier.spaceData);
 fourier.spaceShift = fftshift(fourier.spaceTrans);

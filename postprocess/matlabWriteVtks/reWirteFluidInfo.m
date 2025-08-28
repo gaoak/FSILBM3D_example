@@ -6,11 +6,11 @@ for i = LBM.nBlock:-1:1
     sonBlocks = length(LBM.meshContain{i});
     % Read father mesh data
     [readNameFather, writeNameFather] = generateFilePath(readPath,writePath,0.0,i,1);
-    meshFather = readBinaryFluid(readNameFather,0.0,[0 0 0],LBM.Uref,LBM.Lref,LBM.Tref);  
+    meshFather = readBinaryFluid(readNameFather,0.0,[0 0 0],LBM.Uref,LBM.Lref,LBM.Tref,LBM.Pref);  
     % Read son mesh data
     for j = 1:sonBlocks
         [readNameSon, writeNameSon] = generateFilePath(readPath,writePath,0.0,LBM.meshContain{i}(j),1);
-        meshSon = readBinaryFluid(readNameSon,0.0,[0 0 0],LBM.Uref,LBM.Lref,LBM.Tref); 
+        meshSon = readBinaryFluid(readNameSon,0.0,[0 0 0],LBM.Uref,LBM.Lref,LBM.Tref,LBM.Pref); 
         % Update mesh data in coarse mesh
         meshFather = finerToCoarse(meshSon,meshFather);
         fprintf('deliver data from block %d to block %d\n',LBM.meshContain{i}(j),i)

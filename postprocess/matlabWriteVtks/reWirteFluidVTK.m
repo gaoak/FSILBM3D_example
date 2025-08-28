@@ -27,5 +27,5 @@ for n = 1:nfile
     end
 end
 % write whole block contains the calculation domain at all times
-writeWholeVTK(meshFather,time,LBM.UVW,LBM.Lref,LBM.Tref,writePath)
+writeWholeVTK(meshFather,LBM.eTime-LBM.sTime,LBM.UVW,LBM.Lref,LBM.Tref,writePath)
 fclose all;

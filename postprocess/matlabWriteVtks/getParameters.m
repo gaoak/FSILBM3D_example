@@ -6,7 +6,7 @@ isUseMovingGridPost  = true;
 isHalfWayBounceBack  = false;
 isGiveCalculateTime  = [];  
 % empty means using the parameters in inflow.dat
-casePath = 'G:\TandemPlates\Propelling\Self-proelledPlateTest1';
+casePath = 'G:\TandemPlates\TwoPlatesInTandem\Re200K3.50Theta00H1.0L2.0Phi\Phi180';
 %% Read key lines
 if ~isfile([casePath '\check.dat' ])
     error('Can not found check file! : %s' ,[casePath '\check.dat' ]);
