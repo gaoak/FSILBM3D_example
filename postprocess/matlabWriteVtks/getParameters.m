@@ -1,12 +1,12 @@
 clear;clc;close all;format long
 %% Case path
 isOnlyWriteRootBlock = true;
-isUseMovingGridPost  = true;  
+isUseMovingGridPost  = false;  
 % only for moving girds
 isHalfWayBounceBack  = false;
-isGiveCalculateTime  = [];  
+isGiveCalculateTime  = [0 0.4 3.8];  
 % empty means using the parameters in inflow.dat
-casePath = 'G:\TandemPlates\TwoPlatesInTandem\Re200K3.50Theta00H1.0L2.0Phi\Phi180';
+casePath = 'H:\FishNearFlexibleGround\SourceData3D_2025\Re100Kf3.50Kp3.00F1.00H0.500\D0.00';
 %% Read key lines
 if ~isfile([casePath '\check.dat' ])
     error('Can not found check file! : %s' ,[casePath '\check.dat' ]);
@@ -41,7 +41,7 @@ LBM.nBlock = floor(str2double(readLine.fluidLine{1})); % the number of fluid blo
 LBM.nSolid = floor(str2double(readLine.solidLine{1})); % the number of solids
 LBM.meshContain = cell(LBM.nBlock); % the contian relationship of the fluid blocks, the space means no son block
 if isUseMovingGridPost
-    LBM.UVW    = [str2double(readLine.UVWlLine{1}) str2double(readLine.UVWlLine{2}) str2double(readLine.UVWlLine{3})]; % mehs moving velocity
+    LBM.UVW    = [str2double(readLine.UVWlLine{1}) str2double(readLine.UVWlLine{2}) str2double(readLine.UVWlLine{3})]; % mesh moving velocity
 else
     LBM.UVW    = [0 0 0];
 end
