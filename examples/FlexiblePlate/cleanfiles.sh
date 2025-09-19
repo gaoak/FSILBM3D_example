@@ -1,4 +1,4 @@
-for folder in DatBodySpan DatInfo DatBody DatFlow 
+for folder in DatBodySpan DatInfo DatBody DatFlow DatContinue
 do
   if [[ -d $folder ]]; then
     rm -r $folder
@@ -10,7 +10,7 @@ do
   fi
 done
 
-for file in check.dat continue.dat log.* *.txt
+for file in check.dat log.* *.txt
 do
   if [[ -e $file ]]; then
     rm $file

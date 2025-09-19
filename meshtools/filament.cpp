@@ -266,7 +266,7 @@ void Output(string filename, vector<vector<double> > &points, vector<vector<int>
 int main() {
     std::vector<double> param = filaparams;
     int Np = NPOINTS;
-    string filename("plate.dat");
+    //string fileName = filename;
     vector<vector<double> > points;
     vector<vector<int> > elements;
     vector<vector<int> > boundCondition;
@@ -278,7 +278,7 @@ int main() {
     GeneratePoints(Np, param, points, normal, param, CLOSED);
     GenerateElements(points, elements, boundCondition, CLOSED);
     GenerateSpans(Np, param[0], spantp, spanpm, Lspan, Rspan, Nspan, CLOSED);
-    Output(filename, points, elements, boundCondition, Lspan, Rspan, Nspan);
+    Output(FILENAME, points, elements, boundCondition, Lspan, Rspan, Nspan);
     
     return 0;
 }
