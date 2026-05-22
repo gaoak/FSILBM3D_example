@@ -159,6 +159,6 @@ CONSTRAINT
    50     0     0     0     0     0     0
    51     0     0     0     0     0     0
 MATERIAL
-1   E           G           A           RHO         GAMMA       JT          IY          IZ
+1           E           G           A         RHO       GAMMA          JT          IY          IZ
 1   0.100D+01   0.100D+01   0.100D+01   0.100D+01   0.000D+00   0.100D+01   0.150D+01   0.500D+00
 END

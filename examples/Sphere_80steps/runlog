@@ -18,1213 +18,1061 @@
 =========================================================
  the start step for fluid averaging(if used):           0
 =========================================================
- Time for preparation before computing:   1.5010000000000012     
+ Time for preparation before computing:   2.0649999999999977     
 =========================================================
  Time loop beginning
 =========================================================
- Steps:       1  Time/Tref:    0.00020000
+ Steps:       1  Time/Tref:    0.00025000
  --------------------- fluid solver ---------------------
- Time for collision step:   9.2999999999999972E-002
- Time for streaming step:   3.9999999999999147E-002
- Time for       IBM step:   2.0000000000024443E-003
+ Time for collision step:  0.17799999999999727     
+ Time for streaming step:   9.0000000000003411E-002
+ Time for       IBM step:   3.9999999999977831E-003
  --------------------- solid solver ---------------------
  Time for     solid step:   0.0000000000000000     
  ---------------------- write info ----------------------
  Time for   writing step:   0.0000000000000000     
  ----------------------- one step -----------------------
- Time for       one step:  0.20300000000000296     
+ Time for       one step:  0.41000000000000369     
 =========================================================
- Steps:       2  Time/Tref:    0.00040000
+ Steps:       2  Time/Tref:    0.00050000
  --------------------- fluid solver ---------------------
- Time for collision step:   3.9000000000001478E-002
- Time for streaming step:   3.8999999999997925E-002
- Time for       IBM step:   1.9999999999988916E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13299999999999912     
-=========================================================
- Steps:       3  Time/Tref:    0.00060000
- --------------------- fluid solver ---------------------
- Time for collision step:   4.0000000000002700E-002
- Time for streaming step:   4.1000000000000369E-002
- Time for       IBM step:   1.9999999999988916E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13700000000000045     
-=========================================================
- Steps:       4  Time/Tref:    0.00080000
- --------------------- fluid solver ---------------------
- Time for collision step:   4.1999999999998039E-002
- Time for streaming step:   3.9000000000001478E-002
- Time for       IBM step:   1.9999999999988916E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13599999999999923     
-=========================================================
- Steps:       5  Time/Tref:    0.00100000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   3.9999999999999147E-002
- Time for       IBM step:   1.0000000000012221E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13599999999999923     
-=========================================================
- Steps:       6  Time/Tref:    0.00120000
- --------------------- fluid solver ---------------------
- Time for collision step:   4.1000000000000369E-002
- Time for streaming step:   4.8000000000001819E-002
- Time for       IBM step:   1.0000000000012221E-003
+ Time for collision step:   8.1000000000003070E-002
+ Time for streaming step:   9.8999999999996646E-002
+ Time for       IBM step:   3.0000000000001137E-003
  --------------------- solid solver ---------------------
  Time for     solid step:   9.9999999999766942E-004
  ---------------------- write info ----------------------
  Time for   writing step:   0.0000000000000000     
  ----------------------- one step -----------------------
- Time for       one step:  0.14600000000000080     
+ Time for       one step:  0.29699999999999704     
 =========================================================
- Steps:       7  Time/Tref:    0.00140000
+ Steps:       3  Time/Tref:    0.00075000
  --------------------- fluid solver ---------------------
- Time for collision step:   4.1000000000000369E-002
- Time for streaming step:   3.9999999999999147E-002
- Time for       IBM step:   1.9999999999988916E-003
+ Time for collision step:   8.2000000000000739E-002
+ Time for streaming step:  0.10199999999999676     
+ Time for       IBM step:   3.9999999999977831E-003
  --------------------- solid solver ---------------------
  Time for     solid step:   0.0000000000000000     
  ---------------------- write info ----------------------
  Time for   writing step:   0.0000000000000000     
  ----------------------- one step -----------------------
- Time for       one step:  0.14099999999999824     
+ Time for       one step:  0.30599999999999739     
 =========================================================
- Steps:       8  Time/Tref:    0.00160000
+ Steps:       4  Time/Tref:    0.00100000
  --------------------- fluid solver ---------------------
- Time for collision step:   4.1999999999998039E-002
- Time for streaming step:   4.4000000000000483E-002
- Time for       IBM step:   1.9999999999988916E-003
+ Time for collision step:   8.4000000000003183E-002
+ Time for streaming step:  0.10699999999999932     
+ Time for       IBM step:   6.0000000000002274E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   9.9999999999766942E-004
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.32900000000000063     
+=========================================================
+ Steps:       5  Time/Tref:    0.00125000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   8.8999999999998636E-002
+ Time for streaming step:  0.10099999999999909     
+ Time for       IBM step:   3.9999999999977831E-003
  --------------------- solid solver ---------------------
  Time for     solid step:   0.0000000000000000     
  ---------------------- write info ----------------------
  Time for   writing step:   0.0000000000000000     
  ----------------------- one step -----------------------
- Time for       one step:  0.14600000000000080     
+ Time for       one step:  0.31700000000000017     
 =========================================================
- Steps:       9  Time/Tref:    0.00180000
+ Steps:       6  Time/Tref:    0.00150000
  --------------------- fluid solver ---------------------
- Time for collision step:   4.0000000000002700E-002
- Time for streaming step:   4.1000000000000369E-002
- Time for       IBM step:   1.9999999999988916E-003
+ Time for collision step:   8.2000000000000739E-002
+ Time for streaming step:   9.1000000000001080E-002
+ Time for       IBM step:   6.0000000000002274E-003
  --------------------- solid solver ---------------------
  Time for     solid step:   0.0000000000000000     
  ---------------------- write info ----------------------
  Time for   writing step:   0.0000000000000000     
  ----------------------- one step -----------------------
- Time for       one step:  0.13700000000000045     
+ Time for       one step:  0.29599999999999937     
 =========================================================
- Steps:      10  Time/Tref:    0.00200000
+ Steps:       7  Time/Tref:    0.00175000
  --------------------- fluid solver ---------------------
- Time for collision step:   4.1000000000000369E-002
- Time for streaming step:   4.0999999999996817E-002
- Time for       IBM step:   1.9999999999988916E-003
+ Time for collision step:   8.0000000000005400E-002
+ Time for streaming step:   9.1999999999998749E-002
+ Time for       IBM step:   6.0000000000002274E-003
  --------------------- solid solver ---------------------
  Time for     solid step:   0.0000000000000000     
  ---------------------- write info ----------------------
  Time for   writing step:   0.0000000000000000     
  ----------------------- one step -----------------------
- Time for       one step:  0.14199999999999946     
+ Time for       one step:  0.29100000000000392     
 =========================================================
- Steps:      11  Time/Tref:    0.00220000
+ Steps:       8  Time/Tref:    0.00200000
  --------------------- fluid solver ---------------------
- Time for collision step:   4.4999999999998153E-002
- Time for streaming step:   5.0000000000000711E-002
- Time for       IBM step:   1.9999999999988916E-003
+ Time for collision step:   8.1000000000003070E-002
+ Time for streaming step:   9.1000000000001080E-002
+ Time for       IBM step:   3.0000000000001137E-003
  --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
+ Time for     solid step:   9.9999999999766942E-004
  ---------------------- write info ----------------------
  Time for   writing step:   0.0000000000000000     
  ----------------------- one step -----------------------
- Time for       one step:  0.15800000000000125     
+ Time for       one step:  0.28799999999999670     
 =========================================================
- Steps:      12  Time/Tref:    0.00240000
+ Steps:       9  Time/Tref:    0.00225000
  --------------------- fluid solver ---------------------
- Time for collision step:   4.2999999999999261E-002
- Time for streaming step:   4.4000000000000483E-002
- Time for       IBM step:   2.0000000000024443E-003
+ Time for collision step:   8.0000000000005400E-002
+ Time for streaming step:   9.0999999999993975E-002
+ Time for       IBM step:   3.0000000000001137E-003
  --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
+ Time for     solid step:   9.9999999999766942E-004
  ---------------------- write info ----------------------
  Time for   writing step:   0.0000000000000000     
  ----------------------- one step -----------------------
- Time for       one step:  0.14699999999999847     
+ Time for       one step:  0.28900000000000148     
 =========================================================
- Steps:      13  Time/Tref:    0.00260000
+ Steps:      10  Time/Tref:    0.00250000
  --------------------- fluid solver ---------------------
- Time for collision step:   4.2999999999999261E-002
- Time for streaming step:   4.7000000000000597E-002
- Time for       IBM step:   9.9999999999766942E-004
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.15099999999999980     
-=========================================================
- Steps:      14  Time/Tref:    0.00280000
- --------------------- fluid solver ---------------------
- Time for collision step:   4.1999999999998039E-002
- Time for streaming step:   4.5999999999999375E-002
- Time for       IBM step:   9.9999999999766942E-004
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.14600000000000080     
-=========================================================
- Steps:      15  Time/Tref:    0.00300000
- --------------------- fluid solver ---------------------
- Time for collision step:   4.2000000000001592E-002
- Time for streaming step:   4.2999999999999261E-002
+ Time for collision step:   8.0000000000005400E-002
+ Time for streaming step:   9.1000000000001080E-002
  Time for       IBM step:   3.0000000000001137E-003
  --------------------- solid solver ---------------------
  Time for     solid step:   0.0000000000000000     
  ---------------------- write info ----------------------
  Time for   writing step:   0.0000000000000000     
  ----------------------- one step -----------------------
- Time for       one step:  0.14700000000000202     
+ Time for       one step:  0.28999999999999915     
 =========================================================
- Steps:      16  Time/Tref:    0.00320000
+ Steps:      11  Time/Tref:    0.00275000
  --------------------- fluid solver ---------------------
- Time for collision step:   4.1999999999998039E-002
- Time for streaming step:   3.9999999999999147E-002
- Time for       IBM step:   1.9999999999988916E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13999999999999702     
-=========================================================
- Steps:      17  Time/Tref:    0.00340000
- --------------------- fluid solver ---------------------
- Time for collision step:   4.1000000000000369E-002
- Time for streaming step:   4.1000000000000369E-002
- Time for       IBM step:   1.9999999999988916E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.14200000000000301     
-=========================================================
- Steps:      18  Time/Tref:    0.00360000
- --------------------- fluid solver ---------------------
- Time for collision step:   4.2000000000001592E-002
- Time for streaming step:   3.8999999999997925E-002
- Time for       IBM step:   1.9999999999988916E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.14199999999999946     
-=========================================================
- Steps:      19  Time/Tref:    0.00380000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   4.2000000000001592E-002
- Time for       IBM step:   1.9999999999988916E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13599999999999923     
-=========================================================
- Steps:      20  Time/Tref:    0.00400000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.8999999999997925E-002
- Time for streaming step:   3.9000000000001478E-002
- Time for       IBM step:   2.0000000000024443E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13199999999999790     
-=========================================================
- Steps:      21  Time/Tref:    0.00420000
- --------------------- fluid solver ---------------------
- Time for collision step:   4.0000000000002700E-002
- Time for streaming step:   3.8999999999997925E-002
- Time for       IBM step:   9.9999999999766942E-004
- --------------------- solid solver ---------------------
- Time for     solid step:   1.0000000000012221E-003
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13300000000000267     
-=========================================================
- Steps:      22  Time/Tref:    0.00440000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   3.9000000000001478E-002
- Time for       IBM step:   9.9999999999766942E-004
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13400000000000034     
-=========================================================
- Steps:      23  Time/Tref:    0.00460000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   3.8000000000000256E-002
- Time for       IBM step:   1.9999999999988916E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13199999999999790     
-=========================================================
- Steps:      24  Time/Tref:    0.00480000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.9000000000001478E-002
- Time for streaming step:   3.8999999999997925E-002
- Time for       IBM step:   1.9999999999988916E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13200000000000145     
-=========================================================
- Steps:      25  Time/Tref:    0.00500000
- --------------------- fluid solver ---------------------
- Time for collision step:   4.1000000000000369E-002
- Time for streaming step:   4.3000000000002814E-002
- Time for       IBM step:   1.9999999999988916E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.14000000000000057     
-=========================================================
- Steps:      26  Time/Tref:    0.00520000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   4.1999999999998039E-002
- Time for       IBM step:   9.9999999999766942E-004
- --------------------- solid solver ---------------------
- Time for     solid step:   1.0000000000012221E-003
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13700000000000045     
-=========================================================
- Steps:      27  Time/Tref:    0.00540000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   4.0000000000002700E-002
- Time for       IBM step:   1.9999999999988916E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13499999999999801     
-=========================================================
- Steps:      28  Time/Tref:    0.00560000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   3.9000000000001478E-002
- Time for       IBM step:   1.0000000000012221E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   9.9999999999766942E-004
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13299999999999912     
-=========================================================
- Steps:      29  Time/Tref:    0.00580000
- --------------------- fluid solver ---------------------
- Time for collision step:   4.0000000000002700E-002
- Time for streaming step:   3.7999999999996703E-002
- Time for       IBM step:   1.0000000000012221E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   1.0000000000012221E-003
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13300000000000267     
-=========================================================
- Steps:      30  Time/Tref:    0.00600000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   3.9999999999999147E-002
- Time for       IBM step:   1.9999999999988916E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13299999999999912     
-=========================================================
- Steps:      31  Time/Tref:    0.00620000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.8999999999997925E-002
- Time for streaming step:   3.8000000000000256E-002
- Time for       IBM step:   2.0000000000024443E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13199999999999790     
-=========================================================
- Steps:      32  Time/Tref:    0.00640000
- --------------------- fluid solver ---------------------
- Time for collision step:   4.0000000000002700E-002
- Time for streaming step:   3.8000000000000256E-002
- Time for       IBM step:   1.0000000000012221E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   1.0000000000012221E-003
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13200000000000145     
-=========================================================
- Steps:      33  Time/Tref:    0.00660000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   4.1999999999998039E-002
+ Time for collision step:   7.9000000000000625E-002
+ Time for streaming step:   9.0000000000003411E-002
  Time for       IBM step:   3.0000000000001137E-003
  --------------------- solid solver ---------------------
  Time for     solid step:   0.0000000000000000     
  ---------------------- write info ----------------------
  Time for   writing step:   0.0000000000000000     
  ----------------------- one step -----------------------
- Time for       one step:  0.13800000000000168     
+ Time for       one step:  0.28500000000000369     
 =========================================================
- Steps:      34  Time/Tref:    0.00680000
+ Steps:      12  Time/Tref:    0.00300000
  --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   3.9000000000001478E-002
- Time for       IBM step:   1.0000000000012221E-003
+ Time for collision step:   7.9999999999998295E-002
+ Time for streaming step:   9.1000000000001080E-002
+ Time for       IBM step:   3.0000000000001137E-003
  --------------------- solid solver ---------------------
- Time for     solid step:   9.9999999999766942E-004
+ Time for     solid step:   1.0000000000047748E-003
  ---------------------- write info ----------------------
  Time for   writing step:   0.0000000000000000     
  ----------------------- one step -----------------------
- Time for       one step:  0.13199999999999790     
+ Time for       one step:  0.28600000000000136     
 =========================================================
- Steps:      35  Time/Tref:    0.00700000
+ Steps:      13  Time/Tref:    0.00325000
  --------------------- fluid solver ---------------------
- Time for collision step:   3.9000000000001478E-002
- Time for streaming step:   3.8999999999997925E-002
- Time for       IBM step:   1.0000000000012221E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   1.0000000000012221E-003
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13299999999999912     
-=========================================================
- Steps:      36  Time/Tref:    0.00720000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.9000000000001478E-002
- Time for streaming step:   3.9000000000001478E-002
- Time for       IBM step:   1.9999999999988916E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   1.0000000000012221E-003
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13200000000000145     
-=========================================================
- Steps:      37  Time/Tref:    0.00740000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   4.1000000000000369E-002
- Time for       IBM step:   1.9999999999988916E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13500000000000156     
-=========================================================
- Steps:      38  Time/Tref:    0.00760000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.8999999999997925E-002
- Time for streaming step:   3.9000000000001478E-002
- Time for       IBM step:   9.9999999999766942E-004
- --------------------- solid solver ---------------------
- Time for     solid step:   1.0000000000012221E-003
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13299999999999912     
-=========================================================
- Steps:      39  Time/Tref:    0.00780000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   4.0000000000002700E-002
- Time for       IBM step:   1.0000000000012221E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   9.9999999999766942E-004
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13299999999999912     
-=========================================================
- Steps:      40  Time/Tref:    0.00800000
- --------------------- fluid solver ---------------------
- Time for collision step:   4.1000000000000369E-002
- Time for streaming step:   3.9000000000001478E-002
- Time for       IBM step:   2.0000000000024443E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13299999999999912     
-=========================================================
- Steps:      41  Time/Tref:    0.00820000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   3.8999999999997925E-002
- Time for       IBM step:   1.9999999999988916E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13200000000000145     
-=========================================================
- Steps:      42  Time/Tref:    0.00840000
- --------------------- fluid solver ---------------------
- Time for collision step:   4.1000000000000369E-002
- Time for streaming step:   3.8999999999997925E-002
+ Time for collision step:   7.9000000000000625E-002
+ Time for streaming step:   9.1000000000001080E-002
  Time for       IBM step:   3.0000000000001137E-003
  --------------------- solid solver ---------------------
  Time for     solid step:   0.0000000000000000     
  ---------------------- write info ----------------------
  Time for   writing step:   0.0000000000000000     
  ----------------------- one step -----------------------
- Time for       one step:  0.13400000000000034     
+ Time for       one step:  0.28599999999999426     
 =========================================================
- Steps:      43  Time/Tref:    0.00860000
+ Steps:      14  Time/Tref:    0.00350000
  --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   3.9000000000001478E-002
- Time for       IBM step:   1.0000000000012221E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13400000000000034     
-=========================================================
- Steps:      44  Time/Tref:    0.00880000
- --------------------- fluid solver ---------------------
- Time for collision step:   4.1000000000000369E-002
- Time for streaming step:   3.9999999999999147E-002
- Time for       IBM step:   1.9999999999988916E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13400000000000034     
-=========================================================
- Steps:      45  Time/Tref:    0.00900000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   3.9999999999999147E-002
- Time for       IBM step:   1.9999999999988916E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13499999999999801     
-=========================================================
- Steps:      46  Time/Tref:    0.00920000
- --------------------- fluid solver ---------------------
- Time for collision step:   4.1000000000000369E-002
- Time for streaming step:   3.9999999999999147E-002
- Time for       IBM step:   2.0000000000024443E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13700000000000045     
-=========================================================
- Steps:      47  Time/Tref:    0.00940000
- --------------------- fluid solver ---------------------
- Time for collision step:   4.0000000000002700E-002
- Time for streaming step:   3.8000000000000256E-002
- Time for       IBM step:   2.0000000000024443E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13200000000000145     
-=========================================================
- Steps:      48  Time/Tref:    0.00960000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   3.8999999999997925E-002
- Time for       IBM step:   9.9999999999766942E-004
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13299999999999912     
-=========================================================
- Steps:      49  Time/Tref:    0.00980000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   3.9000000000001478E-002
- Time for       IBM step:   2.0000000000024443E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13199999999999790     
-=========================================================
- Steps:      50  Time/Tref:    0.01000000
- --------------------- fluid solver ---------------------
- Time for collision step:   4.1000000000000369E-002
- Time for streaming step:   4.1999999999998039E-002
- Time for       IBM step:   9.9999999999766942E-004
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13600000000000279     
-=========================================================
- Steps:      51  Time/Tref:    0.01020000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.8999999999997925E-002
- Time for streaming step:   3.9999999999999147E-002
- Time for       IBM step:   1.9999999999988916E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13299999999999912     
-=========================================================
- Steps:      52  Time/Tref:    0.01040000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   3.8000000000000256E-002
- Time for       IBM step:   1.9999999999988916E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   1.0000000000012221E-003
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13400000000000034     
-=========================================================
- Steps:      53  Time/Tref:    0.01060000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   3.9000000000001478E-002
- Time for       IBM step:   2.0000000000024443E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13199999999999790     
-=========================================================
- Steps:      54  Time/Tref:    0.01080000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.9000000000001478E-002
- Time for streaming step:   3.9000000000001478E-002
- Time for       IBM step:   1.0000000000012221E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13200000000000145     
-=========================================================
- Steps:      55  Time/Tref:    0.01100000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.9000000000001478E-002
- Time for streaming step:   4.1999999999998039E-002
- Time for       IBM step:   1.0000000000012221E-003
+ Time for collision step:   7.9999999999998295E-002
+ Time for streaming step:   9.1000000000001080E-002
+ Time for       IBM step:   3.0000000000001137E-003
  --------------------- solid solver ---------------------
  Time for     solid step:   9.9999999999766942E-004
  ---------------------- write info ----------------------
  Time for   writing step:   0.0000000000000000     
  ----------------------- one step -----------------------
- Time for       one step:  0.13599999999999923     
+ Time for       one step:  0.28500000000000369     
 =========================================================
- Steps:      56  Time/Tref:    0.01120000
+ Steps:      15  Time/Tref:    0.00375000
  --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   3.8000000000000256E-002
- Time for       IBM step:   1.9999999999988916E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   1.0000000000012221E-003
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13299999999999912     
-=========================================================
- Steps:      57  Time/Tref:    0.01140000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   3.9000000000001478E-002
- Time for       IBM step:   1.9999999999988916E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13200000000000145     
-=========================================================
- Steps:      58  Time/Tref:    0.01160000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   4.2000000000001592E-002
- Time for       IBM step:   1.0000000000012221E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13599999999999923     
-=========================================================
- Steps:      59  Time/Tref:    0.01180000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   4.4000000000000483E-002
- Time for       IBM step:   1.9999999999988916E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13700000000000045     
-=========================================================
- Steps:      60  Time/Tref:    0.01200000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   4.1000000000000369E-002
- Time for       IBM step:   1.0000000000012221E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13899999999999935     
-=========================================================
- Steps:      61  Time/Tref:    0.01220000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.9000000000001478E-002
- Time for streaming step:   3.8999999999997925E-002
- Time for       IBM step:   1.0000000000012221E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13200000000000145     
-=========================================================
- Steps:      62  Time/Tref:    0.01240000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   3.9000000000001478E-002
- Time for       IBM step:   1.9999999999988916E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13299999999999912     
-=========================================================
- Steps:      63  Time/Tref:    0.01260000
- --------------------- fluid solver ---------------------
- Time for collision step:   4.1000000000000369E-002
- Time for streaming step:   4.2000000000001592E-002
- Time for       IBM step:   1.0000000000012221E-003
+ Time for collision step:   7.7999999999995850E-002
+ Time for streaming step:   9.2000000000005855E-002
+ Time for       IBM step:   3.0000000000001137E-003
  --------------------- solid solver ---------------------
  Time for     solid step:   9.9999999999766942E-004
  ---------------------- write info ----------------------
  Time for   writing step:   0.0000000000000000     
  ----------------------- one step -----------------------
- Time for       one step:  0.13899999999999935     
+ Time for       one step:  0.28499999999999659     
 =========================================================
- Steps:      64  Time/Tref:    0.01280000
+ Steps:      16  Time/Tref:    0.00400000
  --------------------- fluid solver ---------------------
- Time for collision step:   3.9000000000001478E-002
- Time for streaming step:   4.0999999999996817E-002
- Time for       IBM step:   2.0000000000024443E-003
+ Time for collision step:   7.9999999999998295E-002
+ Time for streaming step:   9.1999999999998749E-002
+ Time for       IBM step:   4.0000000000048885E-003
  --------------------- solid solver ---------------------
  Time for     solid step:   0.0000000000000000     
  ---------------------- write info ----------------------
  Time for   writing step:   0.0000000000000000     
  ----------------------- one step -----------------------
- Time for       one step:  0.13600000000000279     
+ Time for       one step:  0.28900000000000148     
 =========================================================
- Steps:      65  Time/Tref:    0.01300000
+ Steps:      17  Time/Tref:    0.00425000
  --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   3.8999999999997925E-002
- Time for       IBM step:   1.9999999999988916E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13399999999999679     
-=========================================================
- Steps:      66  Time/Tref:    0.01320000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   3.9000000000001478E-002
- Time for       IBM step:   1.0000000000012221E-003
+ Time for collision step:   7.8000000000002956E-002
+ Time for streaming step:   9.1000000000001080E-002
+ Time for       IBM step:   3.0000000000001137E-003
  --------------------- solid solver ---------------------
  Time for     solid step:   9.9999999999766942E-004
  ---------------------- write info ----------------------
  Time for   writing step:   0.0000000000000000     
  ----------------------- one step -----------------------
- Time for       one step:  0.13400000000000034     
+ Time for       one step:  0.28500000000000369     
 =========================================================
- Steps:      67  Time/Tref:    0.01340000
+ Steps:      18  Time/Tref:    0.00450000
  --------------------- fluid solver ---------------------
- Time for collision step:   4.0000000000002700E-002
- Time for streaming step:   3.9999999999999147E-002
- Time for       IBM step:   2.0000000000024443E-003
+ Time for collision step:   7.9000000000000625E-002
+ Time for streaming step:   9.0999999999993975E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   1.0000000000047748E-003
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.28600000000000136     
+=========================================================
+ Steps:      19  Time/Tref:    0.00475000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   7.8999999999993520E-002
+ Time for streaming step:   9.1999999999998749E-002
+ Time for       IBM step:   4.0000000000048885E-003
  --------------------- solid solver ---------------------
  Time for     solid step:   0.0000000000000000     
  ---------------------- write info ----------------------
  Time for   writing step:   0.0000000000000000     
  ----------------------- one step -----------------------
- Time for       one step:  0.13700000000000045     
+ Time for       one step:  0.28499999999999659     
 =========================================================
- Steps:      68  Time/Tref:    0.01360000
+ Steps:      20  Time/Tref:    0.00500000
  --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   3.9000000000001478E-002
- Time for       IBM step:   2.0000000000024443E-003
+ Time for collision step:   7.9999999999998295E-002
+ Time for streaming step:   9.1000000000008185E-002
+ Time for       IBM step:   3.9999999999906777E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   1.0000000000047748E-003
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.28700000000000614     
+=========================================================
+ Steps:      21  Time/Tref:    0.00525000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   8.0999999999988859E-002
+ Time for streaming step:   9.3000000000003524E-002
+ Time for       IBM step:   4.0000000000048885E-003
  --------------------- solid solver ---------------------
  Time for     solid step:   0.0000000000000000     
  ---------------------- write info ----------------------
  Time for   writing step:   0.0000000000000000     
  ----------------------- one step -----------------------
- Time for       one step:  0.13400000000000034     
+ Time for       one step:  0.29099999999999682     
 =========================================================
- Steps:      69  Time/Tref:    0.01380000
+ Steps:      22  Time/Tref:    0.00550000
  --------------------- fluid solver ---------------------
- Time for collision step:   3.9000000000001478E-002
- Time for streaming step:   3.8999999999997925E-002
- Time for       IBM step:   1.0000000000012221E-003
+ Time for collision step:   7.8999999999993520E-002
+ Time for streaming step:   9.0999999999993975E-002
+ Time for       IBM step:   4.0000000000048885E-003
  --------------------- solid solver ---------------------
  Time for     solid step:   0.0000000000000000     
  ---------------------- write info ----------------------
  Time for   writing step:   0.0000000000000000     
  ----------------------- one step -----------------------
- Time for       one step:  0.13200000000000145     
+ Time for       one step:  0.28699999999999193     
 =========================================================
- Steps:      70  Time/Tref:    0.01400000
+ Steps:      23  Time/Tref:    0.00575000
  --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   3.9000000000001478E-002
- Time for       IBM step:   9.9999999999766942E-004
+ Time for collision step:   7.9999999999998295E-002
+ Time for streaming step:   9.0999999999993975E-002
+ Time for       IBM step:   3.9999999999906777E-003
  --------------------- solid solver ---------------------
  Time for     solid step:   0.0000000000000000     
  ---------------------- write info ----------------------
  Time for   writing step:   0.0000000000000000     
  ----------------------- one step -----------------------
- Time for       one step:  0.13299999999999912     
+ Time for       one step:  0.28700000000000614     
 =========================================================
- Steps:      71  Time/Tref:    0.01420000
+ Steps:      24  Time/Tref:    0.00600000
  --------------------- fluid solver ---------------------
- Time for collision step:   4.0000000000002700E-002
- Time for streaming step:   3.8999999999997925E-002
- Time for       IBM step:   1.9999999999988916E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13500000000000156     
-=========================================================
- Steps:      72  Time/Tref:    0.01440000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   3.8000000000000256E-002
- Time for       IBM step:   9.9999999999766942E-004
- --------------------- solid solver ---------------------
- Time for     solid step:   1.0000000000012221E-003
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13299999999999912     
-=========================================================
- Steps:      73  Time/Tref:    0.01460000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.8999999999997925E-002
- Time for streaming step:   3.9000000000001478E-002
- Time for       IBM step:   1.9999999999988916E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13299999999999912     
-=========================================================
- Steps:      74  Time/Tref:    0.01480000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   3.8000000000000256E-002
- Time for       IBM step:   2.0000000000024443E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13299999999999912     
-=========================================================
- Steps:      75  Time/Tref:    0.01500000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.9000000000001478E-002
- Time for streaming step:   3.8999999999997925E-002
- Time for       IBM step:   1.0000000000012221E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13200000000000145     
-=========================================================
- Steps:      76  Time/Tref:    0.01520000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.8999999999997925E-002
- Time for streaming step:   3.9000000000001478E-002
- Time for       IBM step:   1.0000000000012221E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13199999999999790     
-=========================================================
- Steps:      77  Time/Tref:    0.01540000
- --------------------- fluid solver ---------------------
- Time for collision step:   4.0000000000002700E-002
- Time for streaming step:   3.8999999999997925E-002
- Time for       IBM step:   1.9999999999988916E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13400000000000034     
-=========================================================
- Steps:      78  Time/Tref:    0.01560000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.9000000000001478E-002
- Time for streaming step:   3.9000000000001478E-002
- Time for       IBM step:   1.9999999999988916E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13300000000000267     
-=========================================================
- Steps:      79  Time/Tref:    0.01580000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   3.8000000000000256E-002
- Time for       IBM step:   1.9999999999988916E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13199999999999790     
-=========================================================
- Steps:      80  Time/Tref:    0.01600000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   4.1000000000000369E-002
- Time for       IBM step:   1.9999999999988916E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13400000000000034     
-=========================================================
- Steps:      81  Time/Tref:    0.01620000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   3.9000000000001478E-002
- Time for       IBM step:   1.0000000000012221E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13400000000000034     
-=========================================================
- Steps:      82  Time/Tref:    0.01640000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   4.1000000000000369E-002
- Time for       IBM step:   1.9999999999988916E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13599999999999923     
-=========================================================
- Steps:      83  Time/Tref:    0.01660000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.9000000000001478E-002
- Time for streaming step:   4.1000000000000369E-002
- Time for       IBM step:   1.0000000000012221E-003
- --------------------- solid solver ---------------------
- Time for     solid step:   0.0000000000000000     
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13500000000000156     
-=========================================================
- Steps:      84  Time/Tref:    0.01680000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   3.9000000000001478E-002
+ Time for collision step:   7.9000000000007731E-002
+ Time for streaming step:   9.1999999999998749E-002
  Time for       IBM step:   3.0000000000001137E-003
  --------------------- solid solver ---------------------
  Time for     solid step:   0.0000000000000000     
  ---------------------- write info ----------------------
  Time for   writing step:   0.0000000000000000     
  ----------------------- one step -----------------------
- Time for       one step:  0.13400000000000034     
+ Time for       one step:  0.28799999999999670     
 =========================================================
- Steps:      85  Time/Tref:    0.01700000
+ Steps:      25  Time/Tref:    0.00625000
  --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   3.9000000000001478E-002
- Time for       IBM step:   1.0000000000012221E-003
+ Time for collision step:   8.2999999999998408E-002
+ Time for streaming step:   9.1999999999998749E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   9.9999999999056399E-004
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.29300000000000637     
+=========================================================
+ Steps:      26  Time/Tref:    0.00650000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   8.1000000000003070E-002
+ Time for streaming step:   9.1000000000008185E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   1.0000000000047748E-003
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.28499999999999659     
+=========================================================
+ Steps:      27  Time/Tref:    0.00675000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   7.9000000000007731E-002
+ Time for streaming step:   9.0999999999993975E-002
+ Time for       IBM step:   3.0000000000001137E-003
  --------------------- solid solver ---------------------
  Time for     solid step:   0.0000000000000000     
  ---------------------- write info ----------------------
  Time for   writing step:   0.0000000000000000     
  ----------------------- one step -----------------------
- Time for       one step:  0.13199999999999790     
+ Time for       one step:  0.28699999999999193     
 =========================================================
- Steps:      86  Time/Tref:    0.01720000
+ Steps:      28  Time/Tref:    0.00700000
  --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   3.8000000000000256E-002
- Time for       IBM step:   2.0000000000024443E-003
+ Time for collision step:   7.8999999999993520E-002
+ Time for streaming step:   9.1000000000008185E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   1.0000000000047748E-003
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.28600000000000136     
+=========================================================
+ Steps:      29  Time/Tref:    0.00725000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   7.8000000000002956E-002
+ Time for streaming step:   9.0999999999993975E-002
+ Time for       IBM step:   3.0000000000001137E-003
  --------------------- solid solver ---------------------
  Time for     solid step:   0.0000000000000000     
  ---------------------- write info ----------------------
  Time for   writing step:   0.0000000000000000     
  ----------------------- one step -----------------------
- Time for       one step:  0.13400000000000034     
+ Time for       one step:  0.28700000000000614     
 =========================================================
- Steps:      87  Time/Tref:    0.01740000
+ Steps:      30  Time/Tref:    0.00750000
  --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   3.8999999999997925E-002
- Time for       IBM step:   1.9999999999988916E-003
+ Time for collision step:   8.1000000000003070E-002
+ Time for streaming step:   9.1000000000008185E-002
+ Time for       IBM step:   3.0000000000001137E-003
  --------------------- solid solver ---------------------
  Time for     solid step:   0.0000000000000000     
  ---------------------- write info ----------------------
  Time for   writing step:   0.0000000000000000     
  ----------------------- one step -----------------------
- Time for       one step:  0.13200000000000145     
+ Time for       one step:  0.28700000000000614     
 =========================================================
- Steps:      88  Time/Tref:    0.01760000
+ Steps:      31  Time/Tref:    0.00775000
  --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   3.8000000000000256E-002
- Time for       IBM step:   1.9999999999988916E-003
+ Time for collision step:   7.9999999999998295E-002
+ Time for streaming step:   9.1000000000008185E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   9.9999999999056399E-004
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.28499999999999659     
+=========================================================
+ Steps:      32  Time/Tref:    0.00800000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   7.9999999999998295E-002
+ Time for streaming step:   9.1000000000008185E-002
+ Time for       IBM step:   3.0000000000001137E-003
  --------------------- solid solver ---------------------
  Time for     solid step:   0.0000000000000000     
  ---------------------- write info ----------------------
  Time for   writing step:   0.0000000000000000     
  ----------------------- one step -----------------------
- Time for       one step:  0.13199999999999790     
+ Time for       one step:  0.28600000000000136     
 =========================================================
- Steps:      89  Time/Tref:    0.01780000
+ Steps:      33  Time/Tref:    0.00825000
  --------------------- fluid solver ---------------------
- Time for collision step:   4.0000000000002700E-002
- Time for streaming step:   3.8999999999997925E-002
- Time for       IBM step:   1.0000000000012221E-003
+ Time for collision step:   8.1000000000003070E-002
+ Time for streaming step:   9.4999999999998863E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   1.0000000000047748E-003
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.29399999999999693     
+=========================================================
+ Steps:      34  Time/Tref:    0.00850000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   8.0999999999988859E-002
+ Time for streaming step:   9.1000000000008185E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   1.0000000000047748E-003
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.28900000000000148     
+=========================================================
+ Steps:      35  Time/Tref:    0.00875000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   7.9000000000007731E-002
+ Time for streaming step:   9.0999999999993975E-002
+ Time for       IBM step:   3.0000000000001137E-003
  --------------------- solid solver ---------------------
  Time for     solid step:   0.0000000000000000     
  ---------------------- write info ----------------------
  Time for   writing step:   0.0000000000000000     
  ----------------------- one step -----------------------
- Time for       one step:  0.13300000000000267     
+ Time for       one step:  0.28499999999999659     
 =========================================================
- Steps:      90  Time/Tref:    0.01800000
+ Steps:      36  Time/Tref:    0.00900000
  --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   3.8999999999997925E-002
- Time for       IBM step:   9.9999999999766942E-004
- --------------------- solid solver ---------------------
- Time for     solid step:   1.0000000000012221E-003
- ---------------------- write info ----------------------
- Time for   writing step:   0.0000000000000000     
- ----------------------- one step -----------------------
- Time for       one step:  0.13299999999999912     
-=========================================================
- Steps:      91  Time/Tref:    0.01820000
- --------------------- fluid solver ---------------------
- Time for collision step:   3.8999999999997925E-002
- Time for streaming step:   3.9000000000001478E-002
- Time for       IBM step:   1.0000000000012221E-003
+ Time for collision step:   7.9000000000007731E-002
+ Time for streaming step:   9.0999999999993975E-002
+ Time for       IBM step:   4.0000000000048885E-003
  --------------------- solid solver ---------------------
  Time for     solid step:   0.0000000000000000     
  ---------------------- write info ----------------------
  Time for   writing step:   0.0000000000000000     
  ----------------------- one step -----------------------
- Time for       one step:  0.13199999999999790     
+ Time for       one step:  0.28499999999999659     
 =========================================================
- Steps:      92  Time/Tref:    0.01840000
+ Steps:      37  Time/Tref:    0.00925000
  --------------------- fluid solver ---------------------
- Time for collision step:   3.9000000000001478E-002
- Time for streaming step:   3.9000000000001478E-002
- Time for       IBM step:   9.9999999999766942E-004
+ Time for collision step:   7.9999999999998295E-002
+ Time for streaming step:   9.1999999999998749E-002
+ Time for       IBM step:   3.0000000000001137E-003
  --------------------- solid solver ---------------------
  Time for     solid step:   0.0000000000000000     
  ---------------------- write info ----------------------
  Time for   writing step:   0.0000000000000000     
  ----------------------- one step -----------------------
- Time for       one step:  0.13200000000000145     
+ Time for       one step:  0.28700000000000614     
 =========================================================
- Steps:      93  Time/Tref:    0.01860000
+ Steps:      38  Time/Tref:    0.00950000
  --------------------- fluid solver ---------------------
- Time for collision step:   3.9000000000001478E-002
- Time for streaming step:   3.8999999999997925E-002
- Time for       IBM step:   1.0000000000012221E-003
+ Time for collision step:   7.9999999999998295E-002
+ Time for streaming step:   8.8999999999998636E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   1.0000000000047748E-003
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.28300000000000125     
+=========================================================
+ Steps:      39  Time/Tref:    0.00975000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   7.9000000000007731E-002
+ Time for streaming step:   9.1999999999998749E-002
+ Time for       IBM step:   3.0000000000001137E-003
  --------------------- solid solver ---------------------
  Time for     solid step:   0.0000000000000000     
  ---------------------- write info ----------------------
  Time for   writing step:   0.0000000000000000     
  ----------------------- one step -----------------------
- Time for       one step:  0.13200000000000145     
+ Time for       one step:  0.28900000000000148     
 =========================================================
- Steps:      94  Time/Tref:    0.01880000
+ Steps:      40  Time/Tref:    0.01000000
  --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   3.8000000000000256E-002
- Time for       IBM step:   1.9999999999988916E-003
+ Time for collision step:   8.0000000000012506E-002
+ Time for streaming step:   9.1999999999998749E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   0.0000000000000000     
+ ---------------------- write info ----------------------
+ Time for streaming step:   8.8999999999998636E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   1.0000000000047748E-003
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.28300000000000125     
+=========================================================
+ Steps:      39  Time/Tref:    0.00975000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   7.9000000000007731E-002
+ Time for streaming step:   9.1999999999998749E-002
+ Time for       IBM step:   3.0000000000001137E-003
  --------------------- solid solver ---------------------
  Time for     solid step:   0.0000000000000000     
  ---------------------- write info ----------------------
  Time for   writing step:   0.0000000000000000     
  ----------------------- one step -----------------------
- Time for       one step:  0.13199999999999790     
+ Time for       one step:  0.28900000000000148     
 =========================================================
- Steps:      95  Time/Tref:    0.01900000
+ Steps:      40  Time/Tref:    0.01000000
  --------------------- fluid solver ---------------------
- Time for collision step:   4.0000000000002700E-002
- Time for streaming step:   4.1999999999998039E-002
- Time for       IBM step:   1.0000000000012221E-003
+ Time for collision step:   8.0000000000012506E-002
+ Time for streaming step:   9.1999999999998749E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   0.0000000000000000     
+ ---------------------- write info ----------------------
+ Time for   writing step:   2.0509999999999877     
+ ----------------------- one step -----------------------
+ Time for       one step:   2.3399999999999892     
+=========================================================
+ Steps:      41  Time/Tref:    0.01025000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   8.1000000000003070E-002
+ Time for streaming step:   9.0999999999993975E-002
+ Time for       IBM step:   3.0000000000001137E-003
  --------------------- solid solver ---------------------
  Time for     solid step:   0.0000000000000000     
  ---------------------- write info ----------------------
  Time for   writing step:   0.0000000000000000     
  ----------------------- one step -----------------------
- Time for       one step:  0.13700000000000045     
+ Time for       one step:  0.29300000000000637     
 =========================================================
- Steps:      96  Time/Tref:    0.01920000
+ Steps:      42  Time/Tref:    0.01050000
  --------------------- fluid solver ---------------------
- Time for collision step:   4.1000000000000369E-002
- Time for streaming step:   3.9000000000001478E-002
- Time for       IBM step:   1.9999999999988916E-003
+ Time for collision step:   8.1000000000003070E-002
+ Time for streaming step:   9.0999999999993975E-002
+ Time for       IBM step:   3.0000000000001137E-003
  --------------------- solid solver ---------------------
  Time for     solid step:   0.0000000000000000     
  ---------------------- write info ----------------------
  Time for   writing step:   0.0000000000000000     
  ----------------------- one step -----------------------
- Time for       one step:  0.13299999999999912     
+ Time for       one step:  0.29099999999999682     
 =========================================================
- Steps:      97  Time/Tref:    0.01940000
+ Steps:      43  Time/Tref:    0.01075000
  --------------------- fluid solver ---------------------
- Time for collision step:   4.0000000000002700E-002
- Time for streaming step:   3.8000000000000256E-002
- Time for       IBM step:   1.0000000000012221E-003
+ Time for collision step:   8.1000000000003070E-002
+ Time for streaming step:   9.1000000000008185E-002
+ Time for       IBM step:   3.9999999999906777E-003
  --------------------- solid solver ---------------------
  Time for     solid step:   0.0000000000000000     
  ---------------------- write info ----------------------
  Time for   writing step:   0.0000000000000000     
  ----------------------- one step -----------------------
- Time for       one step:  0.13300000000000267     
+ Time for       one step:  0.28799999999999670     
 =========================================================
- Steps:      98  Time/Tref:    0.01960000
+ Steps:      44  Time/Tref:    0.01100000
  --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   3.9000000000001478E-002
- Time for       IBM step:   1.9999999999988916E-003
+ Time for collision step:   7.9999999999998295E-002
+ Time for streaming step:   9.1999999999998749E-002
+ Time for       IBM step:   3.0000000000001137E-003
  --------------------- solid solver ---------------------
  Time for     solid step:   0.0000000000000000     
  ---------------------- write info ----------------------
  Time for   writing step:   0.0000000000000000     
  ----------------------- one step -----------------------
- Time for       one step:  0.13199999999999790     
+ Time for       one step:  0.28900000000000148     
 =========================================================
- Steps:      99  Time/Tref:    0.01980000
+ Steps:      45  Time/Tref:    0.01125000
  --------------------- fluid solver ---------------------
- Time for collision step:   3.9999999999999147E-002
- Time for streaming step:   3.8000000000000256E-002
- Time for       IBM step:   1.0000000000012221E-003
+ Time for collision step:   7.8999999999993520E-002
+ Time for streaming step:   9.1000000000008185E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   1.0000000000047748E-003
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.28600000000000136     
+=========================================================
+ Steps:      46  Time/Tref:    0.01150000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   7.8000000000002956E-002
+ Time for streaming step:   9.1999999999998749E-002
+ Time for       IBM step:   3.0000000000001137E-003
  --------------------- solid solver ---------------------
  Time for     solid step:   0.0000000000000000     
  ---------------------- write info ----------------------
  Time for   writing step:   0.0000000000000000     
  ----------------------- one step -----------------------
- Time for       one step:  0.13299999999999912     
+ Time for       one step:  0.28499999999999659     
 =========================================================
- Steps:     100  Time/Tref:    0.02000000
+ Steps:      47  Time/Tref:    0.01175000
  --------------------- fluid solver ---------------------
- Time for collision step:   4.1000000000000369E-002
- Time for streaming step:   4.1000000000000369E-002
- Time for       IBM step:   1.9999999999988916E-003
+ Time for collision step:   7.8999999999993520E-002
+ Time for streaming step:   9.1000000000008185E-002
+ Time for       IBM step:   6.0000000000002274E-003
  --------------------- solid solver ---------------------
  Time for     solid step:   0.0000000000000000     
  ---------------------- write info ----------------------
  Time for   writing step:   0.0000000000000000     
  ----------------------- one step -----------------------
- Time for       one step:  0.13700000000000045     
+ Time for       one step:  0.28800000000001091     
 =========================================================
- FIELDSTAT L2 u     0.968933563431
- FIELDSTAT L2 v     0.093655280861
- FIELDSTAT L2 w     0.000000000000
- FIELDSTAT Linfinity u     1.827275950752
- FIELDSTAT Linfinity v     0.803597958488
- FIELDSTAT Linfinity w     0.000000000000
+ Steps:      48  Time/Tref:    0.01200000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   8.2000000000007844E-002
+ Time for streaming step:   9.0999999999993975E-002
+ Time for       IBM step:   4.9999999999954525E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   0.0000000000000000     
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.28999999999999204     
+=========================================================
+ Steps:      49  Time/Tref:    0.01225000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   7.9999999999998295E-002
+ Time for streaming step:   9.0999999999993975E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   0.0000000000000000     
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.28600000000000136     
+=========================================================
+ Steps:      50  Time/Tref:    0.01250000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   7.9999999999998295E-002
+ Time for streaming step:   9.1000000000008185E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   0.0000000000000000     
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.28600000000000136     
+=========================================================
+ Steps:      51  Time/Tref:    0.01275000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   7.8999999999993520E-002
+ Time for streaming step:   9.4999999999998863E-002
+ Time for       IBM step:   4.0000000000048885E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   0.0000000000000000     
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.29200000000000159     
+=========================================================
+ Steps:      52  Time/Tref:    0.01300000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   8.1000000000003070E-002
+ Time for streaming step:   9.4999999999998863E-002
+ Time for       IBM step:   3.9999999999906777E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   0.0000000000000000     
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.29200000000000159     
+=========================================================
+ Steps:      53  Time/Tref:    0.01325000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   7.8999999999993520E-002
+ Time for streaming step:   9.1000000000008185E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   0.0000000000000000     
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.28900000000000148     
+=========================================================
+ Steps:      54  Time/Tref:    0.01350000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   7.9000000000007731E-002
+ Time for streaming step:   9.1999999999998749E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   0.0000000000000000     
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.28499999999999659     
+=========================================================
+ Steps:      55  Time/Tref:    0.01375000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   7.9000000000007731E-002
+ Time for streaming step:   9.1999999999998749E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   9.9999999999056399E-004
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.28600000000000136     
+=========================================================
+ Steps:      56  Time/Tref:    0.01400000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   7.8999999999993520E-002
+ Time for streaming step:   9.1000000000008185E-002
+ Time for       IBM step:   4.9999999999954525E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   0.0000000000000000     
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.28600000000000136     
+=========================================================
+ Steps:      57  Time/Tref:    0.01425000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   7.9999999999998295E-002
+ Time for streaming step:   9.1000000000008185E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   9.9999999999056399E-004
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.28499999999999659     
+=========================================================
+ Steps:      58  Time/Tref:    0.01450000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   7.8000000000002956E-002
+ Time for streaming step:   9.3000000000003524E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   0.0000000000000000     
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.28600000000000136     
+=========================================================
+ Steps:      59  Time/Tref:    0.01475000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   7.9999999999998295E-002
+ Time for streaming step:   9.1000000000008185E-002
+ Time for       IBM step:   7.9999999999955662E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   0.0000000000000000     
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.28900000000000148     
+=========================================================
+ Steps:      60  Time/Tref:    0.01500000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   7.8000000000002956E-002
+ Time for streaming step:   9.1999999999998749E-002
+ Time for       IBM step:   3.9999999999906777E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   0.0000000000000000     
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.28699999999999193     
+=========================================================
+ Steps:      61  Time/Tref:    0.01525000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   8.1000000000003070E-002
+ Time for streaming step:   9.1999999999998749E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   9.9999999999056399E-004
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.29200000000000159     
+=========================================================
+ Steps:      62  Time/Tref:    0.01550000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   7.9999999999998295E-002
+ Time for streaming step:   9.1999999999998749E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   1.0000000000047748E-003
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.28600000000000136     
+=========================================================
+ Steps:      63  Time/Tref:    0.01575000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   7.9999999999998295E-002
+ Time for streaming step:   9.1999999999998749E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   1.0000000000047748E-003
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.28399999999999181     
+=========================================================
+ Steps:      64  Time/Tref:    0.01600000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   7.8999999999993520E-002
+ Time for streaming step:   9.1000000000008185E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   0.0000000000000000     
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.28500000000001080     
+=========================================================
+ Steps:      65  Time/Tref:    0.01625000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   7.9000000000007731E-002
+ Time for streaming step:   9.1999999999998749E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   0.0000000000000000     
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.28399999999999181     
+=========================================================
+ Steps:      66  Time/Tref:    0.01650000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   7.8999999999993520E-002
+ Time for streaming step:   9.1000000000008185E-002
+ Time for       IBM step:   4.0000000000048885E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   0.0000000000000000     
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.28600000000000136     
+=========================================================
+ Steps:      67  Time/Tref:    0.01675000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   7.8999999999993520E-002
+ Time for streaming step:   9.1999999999998749E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   0.0000000000000000     
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.28700000000000614     
+=========================================================
+ Steps:      68  Time/Tref:    0.01700000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   7.7999999999988745E-002
+ Time for streaming step:   9.1999999999998749E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   0.0000000000000000     
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.28699999999999193     
+=========================================================
+ Steps:      69  Time/Tref:    0.01725000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   8.2999999999998408E-002
+ Time for streaming step:   9.4999999999998863E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   0.0000000000000000     
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.29800000000000182     
+=========================================================
+ Steps:      70  Time/Tref:    0.01750000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   8.2000000000007844E-002
+ Time for streaming step:   9.1999999999998749E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   0.0000000000000000     
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.29200000000000159     
+=========================================================
+ Steps:      71  Time/Tref:    0.01775000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   7.9000000000007731E-002
+ Time for streaming step:   9.1999999999998749E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   1.0000000000047748E-003
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.28600000000000136     
+=========================================================
+ Steps:      72  Time/Tref:    0.01800000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   8.0000000000012506E-002
+ Time for streaming step:   9.1999999999998749E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   9.9999999999056399E-004
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.28699999999999193     
+=========================================================
+ Steps:      73  Time/Tref:    0.01825000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   7.8000000000002956E-002
+ Time for streaming step:   9.1999999999998749E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   1.0000000000047748E-003
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.28600000000000136     
+=========================================================
+ Steps:      74  Time/Tref:    0.01850000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   7.8000000000002956E-002
+ Time for streaming step:   9.2999999999989313E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   0.0000000000000000     
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.28600000000000136     
+=========================================================
+ Steps:      75  Time/Tref:    0.01875000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   7.6999999999998181E-002
+ Time for streaming step:   9.1999999999998749E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   0.0000000000000000     
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.28400000000000603     
+=========================================================
+ Steps:      76  Time/Tref:    0.01900000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   7.9000000000007731E-002
+ Time for streaming step:   9.0999999999993975E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   9.9999999999056399E-004
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.28499999999999659     
+=========================================================
+ Steps:      77  Time/Tref:    0.01925000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   7.8999999999993520E-002
+ Time for streaming step:   9.1999999999998749E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   1.0000000000047748E-003
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.28499999999999659     
+=========================================================
+ Steps:      78  Time/Tref:    0.01950000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   7.9999999999998295E-002
+ Time for streaming step:   9.1999999999998749E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   0.0000000000000000     
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.28700000000000614     
+=========================================================
+ Steps:      79  Time/Tref:    0.01975000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   7.9000000000007731E-002
+ Time for streaming step:   9.1999999999998749E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   0.0000000000000000     
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.28699999999999193     
+=========================================================
+ Steps:      80  Time/Tref:    0.02000000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   7.9999999999998295E-002
+ Time for streaming step:   9.1000000000008185E-002
+ Time for       IBM step:   3.9999999999906777E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   0.0000000000000000     
+ ---------------------- write info ----------------------
+ ----------------------- one step -----------------------
+ Time for       one step:  0.28499999999999659     
+=========================================================
+ Steps:      77  Time/Tref:    0.01925000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   7.8999999999993520E-002
+ Time for streaming step:   9.1999999999998749E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   1.0000000000047748E-003
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.28499999999999659     
+=========================================================
+ Steps:      78  Time/Tref:    0.01950000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   7.9999999999998295E-002
+ Time for streaming step:   9.1999999999998749E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   0.0000000000000000     
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.28700000000000614     
+=========================================================
+ Steps:      79  Time/Tref:    0.01975000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   7.9000000000007731E-002
+ Time for streaming step:   9.1999999999998749E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   0.0000000000000000     
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.28699999999999193     
+=========================================================
+ Steps:      80  Time/Tref:    0.02000000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   7.9999999999998295E-002
+ Time for streaming step:   9.1000000000008185E-002
+ Time for       IBM step:   3.9999999999906777E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   0.0000000000000000     
+ ---------------------- write info ----------------------
+ Time for   writing step:   1.7469999999999999     
+ ----------------------- one step -----------------------
+ Time for       one step:   2.0330000000000013     
+=========================================================
+ Steps:      81  Time/Tref:    0.02025000
+ --------------------- fluid solver ---------------------
+ Time for collision step:   8.2999999999998408E-002
+ Time for streaming step:   9.1999999999998749E-002
+ Time for       IBM step:   3.0000000000001137E-003
+ --------------------- solid solver ---------------------
+ Time for     solid step:   0.0000000000000000     
+ ---------------------- write info ----------------------
+ Time for   writing step:   0.0000000000000000     
+ ----------------------- one step -----------------------
+ Time for       one step:  0.29900000000000659     
+=========================================================
+ FIELDSTAT L2 u     0.995320802394
+ FIELDSTAT L2 v     0.033368510655
+ FIELDSTAT L2 w     0.033368491573
+ FIELDSTAT Linfinity u     1.457194724915
+ FIELDSTAT Linfinity v     0.649958865300
+ FIELDSTAT Linfinity w     0.650097176407

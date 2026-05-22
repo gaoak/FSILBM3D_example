@@ -81,7 +81,7 @@ SolidBody
 =====================
 ENDSolidBody
 ProbingFluid
- 0          0                                 read(buffer,*) fluidProbingNum (0: no output),inWhichBlock 
+ 0          1                                 read(buffer,*) fluidProbingNum (0: no output),inWhichBlock 
  0.000D+0   0.625D+0   0.000D+0               read(buffer,*) fluidProbingCoords(1,1:3)
 ProbingSolid
  0                                            read(buffer,*) solidProbingNum (0: no output)

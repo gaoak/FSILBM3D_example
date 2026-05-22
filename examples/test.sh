@@ -2,7 +2,7 @@ cd ../../FSILBM3D
 make clean
 make
 cd ../FSILBM3D_example/examples
-sleep 5
+sleep 1
 for frqcase in */; do
   [ -d "${frqcase}" ] || continue
   frqcase="${frqcase%/}"

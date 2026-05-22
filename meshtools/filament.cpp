@@ -257,7 +257,7 @@ void Output(string filename, vector<vector<double> > &points, vector<vector<int>
     }
     ofile << "MATERIAL" << "\n";
     // output property parameters
-    ofile << "1   E           G           A           RHO         GAMMA       JT          IY          IZ" << "\n";
+    ofile << "1           E           G           A         RHO       GAMMA          JT          IY          IZ" << "\n";
     ofile << "1   0.100D+01   0.100D+01   0.100D+01   0.100D+01   0.000D+00   0.100D+01   0.150D+01   0.500D+00" << "\n";
     ofile << "END" << endl;
     ofile.close();
@@ -266,7 +266,7 @@ void Output(string filename, vector<vector<double> > &points, vector<vector<int>
 int main() {
     std::vector<double> param = filaparams;
     int Np = NPOINTS;
-    string filename("plate1.dat");
+    string filename("plate.dat");
     vector<vector<double> > points;
     vector<vector<int> > elements;
     vector<vector<int> > boundCondition;
