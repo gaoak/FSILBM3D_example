@@ -1,4 +1,4 @@
-# 2025.03.05
+# 2026.05.19
 Parallel
 # parameter for mpi
  64                                           read(buffer,*) npsize
@@ -28,7 +28,7 @@ FluidBlocks
  0.00   0   0   0   0   0   0   0   0   0     read(buffer,*) params(1:10)
 =====================
  2          1          0          1           read(buffer,*) ID,iCollideModel,offsetOutput,isoutput
- 301         101         49                   read(buffer,*) xDim,yDim,zDim
+ 301         102         50                   read(buffer,*) xDim,yDim,zDim
  0.020D+0  -2.00D+0  -1.000D+0  0.000D+0      read(buffer,*) dh,xmin,ymin,zmin
  0   0   301  301  301   301                  read(buffer,*) boundaryConditions(1:6) (xmin,xmax,ymin,ymax,zmin,zmax)
  0.00   0   0   0   0   0   0   0   0   0     read(buffer,*) params(1:10)
@@ -36,7 +36,7 @@ FluidBlocks
 ENDFluidBlocks
 SolidBody
 # general parameters for solid solver
- 1.000D+0   0.000D+0                          read(buffer,*) IBPenaltyalpha,alphaf
+ 1.000D+0   1.000D+0                          read(buffer,*) IBPenaltyalpha,GeoGamma
  0.500D+0   1.000D+0                          read(buffer,*) NewmarkGamma,NewmarkBeta
  0.000D+0   0.000D+0                          read(buffer,*) dampK,dampM
  1.000D-6   100			                      read(buffer,*) dtolFEM,ntolFEM

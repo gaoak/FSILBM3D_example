@@ -1,0 +1,382 @@
+#!MC 1410
+$!VarSet |LFDSFN1| = '"DatInfo\Group001_nodeAverage_time.dat"'
+$!VarSet |LFDSVL1| = '"t" "x" "y" "z" "dx" "dy" "dz" "u" "v" "w" "ax" "ay" "az"'
+$!VarSet |LFDSFN2| = '"DatInfo\Group002_nodeAverage_time.dat"'
+$!VarSet |LFDSVL2| = '"t" "x" "y" "z" "dx" "dy" "dz" "u" "v" "w" "ax" "ay" "az"'
+$!VarSet |LFDSFN3| = '"Zhu2014PRL\G8\Beam1.dat"'
+$!VarSet |LFDSVL3| = '"t" "x" "y" "z" "dx" "dy" "dz" "u" "v" "w" "ax" "ay" "az"'
+$!VarSet |LFDSFN4| = '"Zhu2014PRL\G8\Beam2.dat"'
+$!VarSet |LFDSVL4| = '"t" "x" "y" "z" "dx" "dy" "dz" "u" "v" "w" "ax" "ay" "az"'
+$!SetStyleBase Factory
+$!GlobalPaper 
+  PaperSizeInfo
+    {
+    Letter
+      {
+      Width = 8.5
+      Height = 11
+      LeftHardClipOffset = 0.125
+      RightHardClipOffset = 0.125
+      TopHardClipOffset = 0.125
+      BottomHardClipOffset = 0.125
+      }
+    A4
+      {
+      Width = 8.2677
+      Height = 11.693
+      }
+    }
+$!Page 
+  Name = 'Untitled'
+  PaperAttributes
+    {
+    BackgroundColor = White
+    IsTransparent = Yes
+    OrientPortrait = No
+    ShowGrid = Yes
+    ShowRuler = No
+    ShowPaper = No
+    PaperSize = Letter
+    RulerSpacing = OneInch
+    PaperGridSpacing = HalfInch
+    RegionInWorkArea
+      {
+      X1 = 0.9934
+      Y1 = 0.1908
+      X2 = 9.993
+      Y2 = 8.191
+      }
+    }
+### Frame Number 1 ###
+$!ReadDataSet  '|LFDSFN1|'
+  InitialPlotType = XYLine
+  IncludeText = No
+  IncludeGeom = No
+  ResetStyle = No
+  AssignStrandIDs = Yes
+  VarLoadMode = ByName
+  VarNameList = '|LFDSVL1|'
+$!RemoveVar |LFDSVL1|
+$!RemoveVar |LFDSFN1|
+$!ReadDataSet  '|LFDSFN2|'
+  InitialPlotType = XYLine
+  IncludeText = No
+  IncludeGeom = No
+  ReadDataOption = Append
+  ResetStyle = No
+  AssignStrandIDs = Yes
+  VarLoadMode = ByName
+  VarNameList = '|LFDSVL2|'
+$!RemoveVar |LFDSVL2|
+$!RemoveVar |LFDSFN2|
+$!ReadDataSet  '|LFDSFN3|'
+  InitialPlotType = XYLine
+  IncludeText = No
+  IncludeGeom = No
+  ReadDataOption = Append
+  ResetStyle = No
+  AssignStrandIDs = Yes
+  VarLoadMode = ByName
+  VarNameList = '|LFDSVL3|'
+$!RemoveVar |LFDSVL3|
+$!RemoveVar |LFDSFN3|
+$!ReadDataSet  '|LFDSFN4|'
+  InitialPlotType = XYLine
+  IncludeText = No
+  IncludeGeom = No
+  ReadDataOption = Append
+  ResetStyle = No
+  AssignStrandIDs = Yes
+  VarLoadMode = ByName
+  VarNameList = '|LFDSVL4|'
+$!RemoveVar |LFDSVL4|
+$!RemoveVar |LFDSFN4|
+$!AlterData  [1-2]
+  IgnoreDivideByZero = Yes
+  Equation = '{u}=-{u}'
+$!FrameLayout 
+  ShowBorder = No
+  ShowHeader = No
+  HeaderColor = Red
+  XYPos
+    {
+    X = 0.86853
+    Y = 0.19741
+    }
+  Width = 9
+  Height = 8
+$!ThreeDAxis 
+  AspectRatioLimit = 25
+  BoxAspectRatioLimit = 25
+$!PlotType  = XYLine
+$!FrameName  = 'Frame 001'
+$!GlobalTime 
+  SolutionTime = 0
+$!DeleteLineMaps 
+$!ActiveLineMaps  =  [1-4]
+$!GlobalLinePlot 
+  DataLabels
+    {
+    DistanceSkip = 5
+    }
+  Legend
+    {
+    Show = Yes
+    TextShape
+      {
+      FontFamily = 'Times New Roman'
+      IsBold = No
+      SizeUnits = Point
+      Height = 14
+      }
+    Box
+      {
+      BoxType = Filled
+      LineThickness = 0.125
+      }
+    RowSpacing = 1.5
+    XYPos
+      {
+      X = 31.323
+      Y = 75.538
+      }
+    AnchorAlignment = TopCenter
+    }
+$!LineMap  [1]
+  Name = '<times>Front plate</times>'
+  Assign
+    {
+    Zone = 1
+    XAxisVar = 1
+    YAxisVar = 8
+    }
+  Lines
+    {
+    Color = Black
+    LineThickness = 0.25
+    }
+  Symbols
+    {
+    Show = No
+    Color = Black
+    FillColor = Red
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [2]
+  Name = '<times>Rear plate</times>'
+  Assign
+    {
+    Zone = 2
+    XAxisVar = 1
+    YAxisVar = 8
+    }
+  Lines
+    {
+    Color = Custom45
+    LineThickness = 0.25
+    }
+  Symbols
+    {
+    Show = No
+    Color = Custom45
+    FillColor = Red
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [3]
+  Name = '<times>Front plate</times>'
+  Assign
+    {
+    Zone = 3
+    XAxisVar = 1
+    YAxisVar = 8
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Show = No
+    Color = Black
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    Color = Black
+    FillMode = UseLineColor
+    FillColor = Red
+    Size = 1.25
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!LineMap  [4]
+  Name = '<times>Rear plate</times>'
+  Assign
+    {
+    Zone = 4
+    XAxisVar = 1
+    YAxisVar = 8
+    ShowInLegend = Never
+    }
+  Lines
+    {
+    Show = No
+    Color = Custom45
+    LineThickness = 0.2
+    }
+  Symbols
+    {
+    SymbolShape
+      {
+      GeomShape = Diamond
+      }
+    Color = Custom45
+    FillMode = UseLineColor
+    FillColor = Red
+    Size = 1.25
+    }
+  BarCharts
+    {
+    Color = Red
+    FillColor = Red
+    }
+  ErrorBars
+    {
+    Color = Red
+    }
+$!XYLineAxis 
+  DepXToYRatio = 1
+  GridArea
+    {
+    DrawBorder = Yes
+    LineThickness = 0.25
+    }
+  ViewportPosition
+    {
+    X1 = 14.854
+    Y1 = 20
+    X2 = 89.854
+    Y2 = 80
+    }
+  ViewportTopSnapTarget = 80
+$!XYLineAxis 
+  XDetail 1
+    {
+    RangeMin = 0
+    RangeMax = 7
+    AutoGrid = No
+    GRSpacing = 1
+    Ticks
+      {
+      Length = 1
+      LineThickness = 0.2
+      NumMinOrTicks = 1
+      MinorLength = 0.6
+      }
+    TickLabel
+      {
+      TextShape
+        {
+        FontFamily = 'Times New Roman'
+        Height = 3.6
+        }
+      NumFormat
+        {
+        Formatting = Integer
+        Precision = 1
+        TimeDateFormat = ''
+        }
+      }
+    Title
+      {
+      TitleMode = UseText
+      Text = '<times><i>t / T</i></times>'
+      TextShape
+        {
+        FontFamily = 'Times New Roman'
+        IsBold = No
+        Height = 3.2
+        }
+      Offset = 5
+      }
+    AxisLine
+      {
+      Show = No
+      LineThickness = 0.3
+      }
+    }
+$!XYLineAxis 
+  YDetail 1
+    {
+    RangeMin = 0
+    RangeMax = 3
+    AutoGrid = No
+    GRSpacing = 1
+    Ticks
+      {
+      Length = 1
+      LineThickness = 0.2
+      NumMinOrTicks = 1
+      MinorLength = 0.6
+      }
+    TickLabel
+      {
+      TextShape
+        {
+        FontFamily = 'Times New Roman'
+        Height = 3.6
+        }
+      NumFormat
+        {
+        Formatting = Integer
+        Precision = 1
+        TimeDateFormat = ''
+        }
+      }
+    Title
+      {
+      TitleMode = UseText
+      Text = '<times><i>U<sup>*</sup></i></times>'
+      TextShape
+        {
+        FontFamily = 'Times New Roman'
+        IsBold = No
+        Height = 3.2
+        }
+      Offset = 5
+      }
+    AxisLine
+      {
+      Show = No
+      LineThickness = 0.3
+      }
+    }
+$!LinePlotLayers 
+  ShowSymbols = Yes
+$!SetAuxData 
+  AuxDataLocation = Frame
+  Name = 'CFDA.INTEGRATION_TOTAL'
+  ValueString = '0.0617410433386704'
+$!FrameControl ActivateByNumber
+  Frame = 1
+$!SetStyleBase Config
