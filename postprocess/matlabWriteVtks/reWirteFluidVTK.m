@@ -8,11 +8,11 @@ for n = 1:nfile
         sonBlocks = length(LBM.meshContain{i});
         % Read father mesh data
         [readNameFather, writeNameFather] = generateFilePath(readPath,writePath,time,i,0);
-        meshFather = readBinaryFluid(readNameFather,time,LBM.UVW,LBM.Uref,LBM.Lref,LBM.Tref);  
+        meshFather = readBinaryFluid(readNameFather,time,LBM.UVW,LBM.Uref,LBM.Lref,LBM.Tref,LBM.Pref);  
         % Read son mesh data
         for j = 1:sonBlocks
             [readNameSon, writeNameSon] = generateFilePath(readPath,writePath,time,LBM.meshContain{i}(j),0);
-            meshSon = readBinaryFluid(readNameSon,time,LBM.UVW,LBM.Uref,LBM.Lref,LBM.Tref); 
+            meshSon = readBinaryFluid(readNameSon,time,LBM.UVW,LBM.Uref,LBM.Lref,LBM.Tref,LBM.Pref); 
             % Update mesh data in coarse mesh
             meshFather = finerToCoarse(meshSon,meshFather);
             fprintf('deliver data from block %d to block %d\n',LBM.meshContain{i}(j),i)
@@ -27,5 +27,5 @@ for n = 1:nfile
     end
 end
 % write whole block contains the calculation domain at all times
-writeWholeVTK(meshFather,time,LBM.UVW,LBM.Lref,LBM.Tref,writePath)
+writeWholeVTK(meshFather,LBM.eTime-LBM.sTime,LBM.UVW,LBM.Lref,LBM.Tref,writePath)
 fclose all;

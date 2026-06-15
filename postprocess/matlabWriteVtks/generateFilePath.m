@@ -27,7 +27,7 @@ elseif(type == 1)  % averaging fluid name
     readName  = [readPath  'MeanFlow_b' newStr2];
     writeName = [writePath 'MeanFlow_b' newStr2 '.vtk'];
 else               % solid name
-    readName  = [readPath  'BodyFake' newStr2 '_' newStr1 '.dat'];
-    writeName = [writePath 'BodyFake' newStr2 '_' newStr1 '.vtk'];
+    readName  = [readPath  'BodiesVirtual_' newStr1 '.dat'];
+    writeName = [writePath 'nBodiesVirtual_' newStr1 '.dat'];
 end
 end

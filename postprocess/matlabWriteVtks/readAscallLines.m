@@ -1,4 +1,4 @@
-function [keyLine] = readKeyLines(filePath,keyWord,nLines)
+function [keyLine] = readAscallLines(filePath,keyWord,nLines)
 % Open file
 fileID = fopen(filePath,'r');
 if fileID == -1
