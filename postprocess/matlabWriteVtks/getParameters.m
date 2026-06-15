@@ -4,29 +4,35 @@ isOnlyWriteRootBlock = true;
 isUseMovingGridPost  = true;  
 % only for moving girds
 isHalfWayBounceBack  = false;
-isGiveCalculateTime  = [];  
+isGiveCalculateTime  = [8 0.125 10];  
 % empty means using the parameters in inflow.dat
-casePath = 'G:\TandemPlates\TwoPlatesInTandem\Re200K3.50Theta00H1.0L2.0Phi\Phi180';
+casePath = 'H:\FishNearFlexibleGround\SourceData3D_2026\Re100H0.50A0.25AR1.00';
 %% Read key lines
-if ~isfile([casePath '\check.dat' ])
-    error('Can not found check file! : %s' ,[casePath '\check.dat' ]);
+if isfile([casePath '\check.dat'])
+    file.check = '\check.dat';
+elseif isfile([casePath '\Check.dat'])
+    file.check = '\Check.dat';
+else
+    error('Can not found check file!');
 end
-if ~isfile([casePath '\inFlow.dat'])
+if isfile([casePath '\inFlow.dat'])
+    file.inflow = '\inFlow.dat';
+else
     error('Can not found inflow file! : %s',[casePath '\inFlow.dat']);
 end
-readLine.ViscLine  = readAscallLines([casePath '\check.dat' ],'Mu'            ,1);
-readLine.UrefLine  = readAscallLines([casePath '\check.dat' ],'Uref'          ,1);
-readLine.TrefLine  = readAscallLines([casePath '\check.dat' ],'Tref'          ,1);
-readLine.LrefLine  = readAscallLines([casePath '\check.dat' ],'Lref'          ,1);
-readLine.PresLine  = readAscallLines([casePath '\check.dat' ],'Pref'          ,1);
-readLine.blockLine = readAscallLines([casePath '\check.dat' ],'sonBlocks'     ,1);
-readLine.densLine  = readAscallLines([casePath '\inFlow.dat'],'denIn'         ,1);
-readLine.UVWlLine  = readAscallLines([casePath '\inFlow.dat'],'uvwIn'         ,1);
-readLine.solidLine = readAscallLines([casePath '\inFlow.dat'],'nFish'         ,1);
-readLine.fluidLine = readAscallLines([casePath '\inFlow.dat'],'nblock'        ,1);
-readLine.TimeLine  = readAscallLines([casePath '\inFlow.dat'],'timeWriteBegin',1);
-readLine.TotalLine = readAscallLines([casePath '\inFlow.dat'],'timeSimTotal'  ,1);
-readLine.deltaLine = readAscallLines([casePath '\inFlow.dat'],'timeWriteFlow' ,1); 
+readLine.ViscLine  = readAscallLines([casePath file.check ],'Mu'            ,1);
+readLine.UrefLine  = readAscallLines([casePath file.check ],'Uref'          ,1);
+readLine.TrefLine  = readAscallLines([casePath file.check ],'Tref'          ,1);
+readLine.LrefLine  = readAscallLines([casePath file.check ],'Lref'          ,1);
+readLine.PresLine  = readAscallLines([casePath file.check ],'Pref'          ,1);
+readLine.blockLine = readAscallLines([casePath file.check ],'sonBlocks'     ,1);
+readLine.densLine  = readAscallLines([casePath file.inflow],'denIn'         ,1);
+readLine.UVWlLine  = readAscallLines([casePath file.inflow],'uvwIn'         ,1);
+readLine.solidLine = readAscallLines([casePath file.inflow],'nFish'         ,1);
+readLine.fluidLine = readAscallLines([casePath file.inflow],'nblock'        ,1);
+readLine.TimeLine  = readAscallLines([casePath file.inflow],'timeWriteBegin',1);
+readLine.TotalLine = readAscallLines([casePath file.inflow],'timeSimTotal'  ,1);
+readLine.deltaLine = readAscallLines([casePath file.inflow],'timeWriteFlow' ,1); 
 if str2double(readLine.deltaLine{1}) ~= str2double(readLine.deltaLine{2})
     warning('solid writing interval %f does not equal fluid writing interval %f!',str2double(deltaLine{1}),str2double(deltaLine{2}))
 end

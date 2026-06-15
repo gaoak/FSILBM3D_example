@@ -1,7 +1,7 @@
 run getParameters.m
 % Set solid index
-group.name = {'Group001';'Group002'};
-group.list = {'energy';'forces';'power';'nodeAverage'};
+group.name = {'Group001'};  % 'Group001';'Group002'
+group.list = {'energy';'forces';'power';'nodeAverage';'centerNode';'firstNode';'lastNode'};
 for ng=1:length(group.name)
     for nl=1:length(group.list)
         % which file to extract

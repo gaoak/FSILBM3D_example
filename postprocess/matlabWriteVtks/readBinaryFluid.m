@@ -14,11 +14,11 @@ mesh.ymin = fread(fileID, 1, 'double') / Lref  - inflowVelocity(2) / Lref * time
 mesh.zmin = fread(fileID, 1, 'double') / Lref  - inflowVelocity(3) / Lref * time * Tref;
 mesh.dh   = fread(fileID, 1, 'double') / Lref ;
 % Read pressure and velocities
-p  = fread(fileID, mesh.nz * mesh.ny * mesh.nx, 'float32') / Pref;
+%p  = fread(fileID, mesh.nz * mesh.ny * mesh.nx, 'float32') / Pref;
 u  = fread(fileID, mesh.nz * mesh.ny * mesh.nx, 'float32') - inflowVelocity(1) / Uref; % k,j,i
 v  = fread(fileID, mesh.nz * mesh.ny * mesh.nx, 'float32') - inflowVelocity(2) / Uref; % dimensionless
 w  = fread(fileID, mesh.nz * mesh.ny * mesh.nx, 'float32') - inflowVelocity(3) / Uref;
-mesh.p  = permute(reshape(p,  [mesh.nz mesh.ny mesh.nx]),[3 2 1]); % i,j,k
+%mesh.p  = permute(reshape(p,  [mesh.nz mesh.ny mesh.nx]),[3 2 1]); % i,j,k
 mesh.u  = permute(reshape(u,  [mesh.nz mesh.ny mesh.nx]),[3 2 1]);
 mesh.v  = permute(reshape(v,  [mesh.nz mesh.ny mesh.nx]),[3 2 1]);
 mesh.w  = permute(reshape(w,  [mesh.nz mesh.ny mesh.nx]),[3 2 1]);

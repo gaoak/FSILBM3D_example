@@ -16,7 +16,7 @@
 std::vector<double> xFMesh{-65.5, -60, 1, 6.5};
 std::vector<int> NxFMesh{220, 6100, 220};
 std::vector<double> yFMesh{-1.2, -1.1, 3, 20};
-std::vector<int> NyFMesh{  10, 410, 680};
+std::vector<int> NyFMesh{10, 410, 680};
 
 /// Generates the body mesh (open or closed)
 /// filament.cpp
