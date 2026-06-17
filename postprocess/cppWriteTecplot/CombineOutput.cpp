@@ -213,11 +213,11 @@ void stackDataFromFiles(const std::string filename,
   NXc = nx;
   NYc = ny;
   NZc = nz;
-  Stacks.resize(6);
+  Stacks.resize(7);
   for (size_t i = 0; i < Stacks.size(); ++i) {
     Stacks[i].resize(NXc * NYc * NZc);
   }
-  tempStacks.resize(3);
+  tempStacks.resize(4);
   for (size_t i = 0; i < tempStacks.size(); ++i) {
     tempStacks[i].resize(NXc * NYc * NZc);
   }
@@ -230,9 +230,10 @@ void stackDataFromFiles(const std::string filename,
     infile.read((char *)&tempStacks[0][offset], datasize);
     infile.read((char *)&tempStacks[1][offset], datasize);
     infile.read((char *)&tempStacks[2][offset], datasize);
+    infile.read((char *)&tempStacks[3][offset], datasize);
   } else {
     std::vector<INREAL> tempBuffer(datasize / sizeof(INREAL));
-    for (size_t i = 0; i < 3; ++i) {
+    for (size_t i = 0; i < 4; ++i) {
       infile.read(reinterpret_cast<char *>(tempBuffer.data()), datasize);
       for (size_t j = 0; j < tempBuffer.size(); j++) {
         tempStacks[i][offset + j] = static_cast<OUTREAL>(tempBuffer[j]);
@@ -253,6 +254,7 @@ void stackDataFromFiles(const std::string filename,
         Stacks[3][idx1d] = tempStacks[0][idx3d];
         Stacks[4][idx1d] = tempStacks[1][idx3d];
         Stacks[5][idx1d] = tempStacks[2][idx3d];
+        Stacks[6][idx1d] = tempStacks[3][idx3d];
       }
     }
   }
@@ -304,7 +306,7 @@ int main(int argc, char *argv[]) {
   std::string plt_file(argv[2]);
   std::vector<size_t> rawN(3);
   std::vector<std::vector<OUTREAL>> Stacks;
-  std::vector<std::string> var = {"x", "y", "z", "u", "v", "w"};
+  std::vector<std::string> var = {"x", "y", "z", "p", "u", "v", "w"};
   // if (showIb) {
   //   var.push_back("Ib");
   // }
