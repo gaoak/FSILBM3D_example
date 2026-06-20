@@ -63,6 +63,10 @@ for frqcase in */; do
       echo "Passed."
   else
       echo "Failed."
+      echo "oldfield"
+      cat oldfield
+      echo "newfield"
+      cat newfield
   fi
 
   cd ..
