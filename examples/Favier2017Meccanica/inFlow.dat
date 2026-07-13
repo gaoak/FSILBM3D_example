@@ -23,7 +23,7 @@ FluidBlocks
  1                                            read(buffer,*) nblock (should be npairs + 1)
  1          1          0          1           read(buffer,*) ID,iCollideModel,offsetOutput,isoutput
  1101       151        5                      read(buffer,*) xDim,yDim,zDim
- 0.020D+0   0.000D+0   0.000D+0   0.000D+0    read(buffer,*) dh,xmin,ymin,zmin
+ 0.020D+0   0.000D+0   0.000D+0  -0.050D+0    read(buffer,*) dh,xmin,ymin,zmin
  301   301   201   201   301   301            read(buffer,*) boundaryConditions(1:6) (xmin,xmax,ymin,ymax,zmin,zmax)
  0.00   0   0   0   0   0   0   0   0   0     read(buffer,*) params(1:10)
 =====================
