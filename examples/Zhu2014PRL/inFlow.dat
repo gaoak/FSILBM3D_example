@@ -1,7 +1,7 @@
 # 2026.05.19
 Parallel
 # parameter for mpi
- 32                                           read(buffer,*) npsize
+ 64                                           read(buffer,*) npsize
 EndParallel
 FlowCondition
  1          1                                 read(buffer,*) isConCmpt,numsubstep
@@ -22,9 +22,9 @@ ENDFlowCondition
 FluidBlocks
  1                                            read(buffer,*) nblock
  1          1          0          1           read(buffer,*) ID,iCollideModel,offsetOutput,isoutput
- 3841       513        1                     read(buffer,*) xDim,yDim,zDim
- 0.015625D+0   -3.000D+1  -4.000D+0  0.000D+0 read(buffer,*) dh,xmin,ymin,zmin
- 0     0     0     0     301   301            read(buffer,*) boundaryConditions(1:6) (xmin,xmax,ymin,ymax,zmin,zmax)
+ 3841       513        4                     read(buffer,*) xDim,yDim,zDim
+ 0.015625D+0   -3.000D+1  -4.000D+0 -0.03125D+0 read(buffer,*) dh,xmin,ymin,zmin
+ 101   103   101   101   301   301            read(buffer,*) boundaryConditions(1:6) (xmin,xmax,ymin,ymax,zmin,zmax)
  0.25   0   0   0   0   0   0   0   0   0     read(buffer,*) params(1:10)
 =====================
 ENDFluidBlocks
