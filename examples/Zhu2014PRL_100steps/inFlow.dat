@@ -1,7 +1,7 @@
 # 2026.05.19
 Parallel
 # parameter for mpi
- 32                                           read(buffer,*) npsize
+ 64                                           read(buffer,*) npsize
 EndParallel
 FlowCondition
  1          1                                 read(buffer,*) isConCmpt,numsubstep
